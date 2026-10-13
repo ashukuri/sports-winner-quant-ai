@@ -245,6 +245,13 @@ select:focus, input[type="text"]:focus, textarea:focus {
   background: var(--bg-card-hover);
 }
 
+.filter-btn.active {
+  background: var(--accent-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--accent-blue) !important;
+  font-weight: 700;
+}
+
 /* 購入判断カード (決定バナー) */
 .decision-box {
   padding: 24px;

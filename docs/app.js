@@ -137,15 +137,38 @@ function initMaintenanceBanner() {
   }
 }
 
-// 2. プリセット試合セレクター初期化
-function initPresetSelector() {
+// 2. プリセット試合セレクター初期化 (全85試合 日付・競技別グループ化)
+function initPresetSelector(filterSport = "ALL") {
   const sel = document.getElementById("presetMatchSelect");
   sel.innerHTML = "";
-  fixturesPreset.forEach(f => {
-    const opt = document.createElement("option");
-    opt.value = f.lottery_id;
-    opt.textContent = `[${f.sport === "Basketball" ? "バスケ" : "サッカー"}] くじ${f.lottery_id}: ${f.commodity_name}`;
-    sel.appendChild(opt);
+
+  // フィルタリング
+  const filtered = filterSport === "ALL" 
+    ? fixturesPreset 
+    : fixturesPreset.filter(f => f.sport === filterSport);
+
+  // 日付 & 競技別にグループ化
+  const groups = {};
+  filtered.forEach(f => {
+    const dateLabel = f.game_date || "その他日程";
+    const sportLabel = f.sport === "Basketball" ? "バスケ (B.LEAGUE)" : "サッカー (J.LEAGUE)";
+    const groupKey = `${dateLabel} 【${sportLabel}】`;
+    if (!groups[groupKey]) groups[groupKey] = [];
+    groups[groupKey].push(f);
+  });
+
+  // optgroup を生成
+  Object.keys(groups).sort().forEach(key => {
+    const optgroup = document.createElement("optgroup");
+    optgroup.label = `${key} - ${groups[key].length}試合`;
+    groups[key].forEach(f => {
+      const opt = document.createElement("option");
+      opt.value = f.lottery_id;
+      const oddsStatus = (f.odds && Object.keys(f.odds).length > 0) ? "⚡実測オッズ有" : "⏳未入力";
+      opt.textContent = `くじ${f.lottery_id}: ${f.commodity_name} (${oddsStatus})`;
+      optgroup.appendChild(opt);
+    });
+    sel.appendChild(optgroup);
   });
 }
 
@@ -182,6 +205,20 @@ function initEventListeners() {
       document.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
       tab.classList.add("active");
       document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+  });
+
+  // 競技フィルター切り替え (すべて / バスケ / サッカー)
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filter = btn.dataset.filter;
+      initPresetSelector(filter);
+      const firstOpt = document.getElementById("presetMatchSelect").querySelector("option");
+      if (firstOpt) {
+        loadPresetMatch(firstOpt.value);
+      }
     });
   });
 
