@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports WINNER Quant AI — 期待値判定 & 自動購入判断 Web Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 年次メンテナンス通知バナー -->
+  <div id="maintenanceBanner" class="maintenance-banner">
+    <div class="banner-content">
+      <span class="banner-badge">定期点検</span>
+      <span id="maintenanceDaysText">モデル学習状態: 正常 (次回メンテナンス推奨: 2027-09-01)</span>
+    </div>
+    <button id="showMaintenanceBtn" class="banner-btn">メンテナンス手順を確認</button>
+  </div>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-title">
+      <h1>⚡ Sports WINNER Quant AI</h1>
+      <p>Bリーグ・サッカーWINNER 期待値判定 & 自動購入判断システム (Conservative_Value_V1)</p>
+    </div>
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="predictTab">🎯 購入判断 & オッズ取得</button>
+      <button class="nav-tab" data-tab="backtestTab">📊 バックテスト実績</button>
+      <button class="nav-tab" data-tab="maintenanceTab">🛠️ 年次メンテナンス手順</button>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+
+    <!-- Tab 1: 購入判断 & オッズ取得 -->
+    <div id="predictTab" class="tab-pane active">
+      <div class="dashboard-grid">
+
+        <!-- 左カラム: 試合選択 & オッズ入力 -->
+        <div class="sidebar-col">
+          <div class="card">
+            <h3 class="card-title">1. 対象試合の選択</h3>
+            
+            <div class="form-group">
+              <label for="presetMatchSelect">販売中公式試合から選択 (1クリック反映)</label>
+              <select id="presetMatchSelect"></select>
+            </div>
+
+            <div class="form-group">
+              <label for="sportSelect">競技種目</label>
+              <select id="sportSelect">
+                <option value="Basketball">バスケットボール (B.LEAGUE 16択)</option>
+                <option value="Soccer">サッカー (J.LEAGUE 18択)</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <div class="form-group">
+                <label for="homeTeamInput">ホームチーム</label>
+                <input type="text" id="homeTeamInput" value="鹿児島レブナイズ">
+              </div>
+              <div class="form-group">
+                <label for="awayTeamInput">アウェイチーム</label>
+                <input type="text" id="awayTeamInput" value="青森ワッツ">
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">2. WINNERオッズの取得・反映</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
+              WINNER公式画面や楽天totoのオッズ表テキストまたはHTMLを貼り付けると、AIが自動解析してオッズを反映します。
+            </p>
+            <div class="form-group">
+              <textarea id="pasteOddsInput" rows="4" placeholder="例:&#10;1-0 5.6倍&#10;2-0 6.8倍&#10;またはオッズ表全体をコピペ"></textarea>
+            </div>
+            <button id="parseOddsBtn" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+              📋 オッズを自動抽出・反映
+            </button>
+          </div>
+        </div>
+
+        <!-- 右カラム: AI購入判定 & EV分析 -->
+        <div class="main-col">
+          <!-- 購入判断カード -->
+          <div class="card" style="padding-bottom: 16px;">
+            <div class="card-title">
+              <span>🤖 AI購入判断 (Conservative_Value_V1)</span>
+              <span id="matchTitle" style="font-size: 0.9rem; color: var(--accent-cyan); font-weight: normal;">B.ONE 鹿児島 vs 青森</span>
+            </div>
+
+            <!-- 判断ボックス (BET / NO_BET) -->
+            <div id="decisionBox" class="decision-box no-bet">
+              <div class="decision-badge">判定計算中...</div>
+            </div>
+          </div>
+
+          <!-- 全選択肢オッズ & EVテーブル -->
+          <div class="card">
+            <h3 class="card-title">
+              <span>全選択肢の期待値 (EV) 分析</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">※ オッズセルを直接編集可能</span>
+            </h3>
+            
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 40px;">No</th>
+                    <th>選択肢</th>
+                    <th style="width: 130px;">表示オッズ</th>
+                    <th style="width: 100px;">AI予測確率</th>
+                    <th>理論EV (期待値)</th>
+                  </tr>
+                </thead>
+                <tbody id="oddsTableBody">
+                  <!-- JSで動的生成 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Tab 2: バックテスト実績 -->
+    <div id="backtestTab" class="tab-pane">
+      <div class="card">
+        <h3 class="card-title">📊 過去データ バックテスト実績 (未知テスト期間)</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+          Jリーグ686試合およびBリーグ604試合の未知テストデータに対し、公式約款第5条（1口200円、10円未満端数切り捨て）に準拠して検証した結果です。
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+          <!-- Bリーグ実績カード -->
+          <div style="background: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border-top: 4px solid var(--accent-cyan);">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 12px; font-size: 1.1rem;">🏀 Bリーグ WINNER (604試合)</h4>
+            <ul style="list-style: none; line-height: 2; font-size: 0.95rem;">
+              <li>・勝敗（2択）的中率: <strong>71.52%</strong> (ランダム 50%)</li>
+              <li>・16択 完全的中率: <strong>13.25%</strong> (ランダム 6.25%の2.1倍)</li>
+              <li>・Conservative_Value 回収率: <strong style="color: var(--accent-green); font-size: 1.2rem;">142.23% (ROI +42.23%)</strong></li>
+              <li>・購入回数: 285回 ／ 的中: 34回</li>
+              <li>・投資総額: 57,000円 ／ 払戻: 81,070円 (純益 +24,070円)</li>
+              <li>・上位3回除外時ROI: <strong>+11.45% (黒字維持)</strong></li>
+            </ul>
+          </div>
+
+          <!-- サッカー実績カード -->
+          <div style="background: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border-top: 4px solid var(--accent-blue);">
+            <h4 style="color: var(--accent-blue); margin-bottom: 12px; font-size: 1.1rem;">⚽ サッカー WINNER (686試合)</h4>
+            <ul style="list-style: none; line-height: 2; font-size: 0.95rem;">
+              <li>・勝敗（3択）的中率: <strong>44.46%</strong> (ランダム 33%)</li>
+              <li>・18択 完全的中率: <strong>11.37%</strong> (ランダム 5.56%の2.0倍)</li>
+              <li>・Conservative_Value 回収率: <strong style="color: var(--accent-green); font-size: 1.2rem;">120.95% (ROI +20.95%)</strong></li>
+              <li>・購入回数: 169回 ／ 的中: 17回</li>
+              <li>・投資総額: 33,800円 ／ 払戻: 40,880円 (純益 +7,080円)</li>
+              <li>・上位3回除外時ROI: <strong style="color: var(--accent-red);">-1.99% (赤字転落)</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--accent-amber); padding: 16px; border-radius: var(--radius-sm);">
+          <strong style="color: var(--accent-amber);">⚠️ クオンツ分析の結論</strong>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px;">
+            AIが「当たりそう」と予測した選択肢をそのまま買う（Most Probable）と、オッズが安すぎて回収率64%〜85%の大赤字になります。
+            <strong>「市場が実力以上に過小評価している穴（EV > +15%）」だけを厳選する Conservative_Value 戦略</strong>こそが、控除率50%の壁を突破する唯一の理論的アプローチです。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: 年次メンテナンス手順 -->
+    <div id="maintenanceTab" class="tab-pane">
+      <div class="card">
+        <h3 class="card-title">🛠️ 年次メンテナンス手順 & 性能劣化防止プロトコル</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+          本システムは動的特徴量エンジンにより日々の再学習は不要ですが、<strong>毎年8月〜9月（新シーズン開幕前）に1回だけ定期メンテナンスを行うこと</strong>を推奨しています。
+        </p>
+
+        <div class="guide-step">
+          <h4>Step 1: 新シーズン分の試合データ追加</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">過去1年間の全公式戦データを収集し、特徴量データセットを更新します。</p>
+          <div class="code-block">python scripts/update_annual_dataset.py</div>
+        </div>
+
+        <div class="guide-step">
+          <h4>Step 2: モデルの年次定期再学習</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">過学習を防ぐ固定アーキテクチャにて、最新データを加えてパラメータを定期更新します。</p>
+          <div class="code-block">python scripts/retrain_models.py</div>
+        </div>
+
+        <div class="guide-step" style="border-left-color: var(--accent-green);">
+          <h4>Step 3: 【最重要】性能劣化防止ゲート（品質検査）の実行</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">
+            新モデルが旧モデルと同等以上の性能（Log Loss $\le$ 2.59, 勝敗的中率 $\ge$ 70%）を維持しているか自動判定します。基準を満たさない場合は自動で旧モデルにロールバックされます。
+          </p>
+          <div class="code-block">python scripts/verify_maintenance.py</div>
+        </div>
+
+        <div class="guide-step" style="border-left-color: var(--accent-cyan);">
+          <h4>Step 4: GitHub Pages への自動デプロイ</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Web用モデルデータを更新し、GitHubへプッシュするとWebダッシュボードが自動更新されます。</p>
+          <div class="code-block">
+python scripts/export_web_model.py<br>
+git commit -am "Annual Maintenance: Updated models for 2027 season"<br>
+git push origin main
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>© 2026 Sports WINNER Quant Research Lab — Powered by Advanced Agentic Quant Engine</p>
+    <p style="margin-top: 4px;">本ソフトウェアは研究およびペーパートレード検証を目的とした数理モデルです。実際のくじ購入は自己責任で行ってください。</p>
+  </footer>
+
+  <!-- スクリプト読み込み -->
+  <script src="model_data.js"></script>
+  <script src="fixtures_preset.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

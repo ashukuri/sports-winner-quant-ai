@@ -1,0 +1,122 @@
+{
+  "sport": "Basketball",
+  "match_id": "BSK_10247",
+  "lottery_id": "10247",
+  "commodity_id": "56",
+  "commodity_name": "B.ONE 2026/10/14 鹿児島 vs 青森",
+  "hold_count": "第426回",
+  "home_team": "鹿児島レブナイズ",
+  "away_team": "青森ワッツ",
+  "game_date": "2026-10-14T10:05:00.000000Z",
+  "sales_end_datetime": "2026-10-14T09:55:00.000000Z",
+  "odds_update_datetime": "2026-10-14T08:30:00Z",
+  "captured_timestamp_utc": "2026-10-13T15:12:40.488735+00:00",
+  "official_url": "https://winner.toto.rakuten.co.jp/detail/singlematch/10247/",
+  "evidence_class": "MANUAL_VERIFIED_PRE_CUTOFF",
+  "is_valid_for_pre_match_betting": true,
+  "raw_evidence_path": "data/raw_evidence/evidence_manual_10247_20261014083000.txt",
+  "raw_evidence_sha256": "647db5c0211e8f49beea1f32e934a055f229febc295d7661a25cd2773399e2b4",
+  "status": "ODDS_AVAILABLE",
+  "n_choices": 16,
+  "reciprocal_sum": 2.0202,
+  "implied_takeout_rate_pct": 50.5,
+  "implied_payout_rate_pct": 49.5,
+  "selections": [
+    {
+      "selection_number": 1,
+      "selection_name": "ホーム勝利1～3点差",
+      "code": "H_1-3",
+      "odds": 7.3
+    },
+    {
+      "selection_number": 2,
+      "selection_name": "ホーム勝利4～6点差",
+      "code": "H_4-6",
+      "odds": 5.9
+    },
+    {
+      "selection_number": 3,
+      "selection_name": "ホーム勝利7～9点差",
+      "code": "H_7-9",
+      "odds": 5.0
+    },
+    {
+      "selection_number": 4,
+      "selection_name": "ホーム勝利10～14点差",
+      "code": "H_10-14",
+      "odds": 5.9
+    },
+    {
+      "selection_number": 5,
+      "selection_name": "ホーム勝利15～19点差",
+      "code": "H_15-19",
+      "odds": 8.1
+    },
+    {
+      "selection_number": 6,
+      "selection_name": "ホーム勝利20～24点差",
+      "code": "H_20-24",
+      "odds": 13.4
+    },
+    {
+      "selection_number": 7,
+      "selection_name": "ホーム勝利25～29点差",
+      "code": "H_25-29",
+      "odds": 29.4
+    },
+    {
+      "selection_number": 8,
+      "selection_name": "ホーム勝利30点差以上",
+      "code": "H_30+",
+      "odds": 25.2
+    },
+    {
+      "selection_number": 9,
+      "selection_name": "アウェイ勝利1～3点差",
+      "code": "A_1-3",
+      "odds": 7.9
+    },
+    {
+      "selection_number": 10,
+      "selection_name": "アウェイ勝利4～6点差",
+      "code": "A_4-6",
+      "odds": 6.8
+    },
+    {
+      "selection_number": 11,
+      "selection_name": "アウェイ勝利7～9点差",
+      "code": "A_7-9",
+      "odds": 5.4
+    },
+    {
+      "selection_number": 12,
+      "selection_name": "アウェイ勝利10～14点差",
+      "code": "A_10-14",
+      "odds": 4.7
+    },
+    {
+      "selection_number": 13,
+      "selection_name": "アウェイ勝利15～19点差",
+      "code": "A_15-19",
+      "odds": 6.4
+    },
+    {
+      "selection_number": 14,
+      "selection_name": "アウェイ勝利20～24点差",
+      "code": "A_20-24",
+      "odds": 10.0
+    },
+    {
+      "selection_number": 15,
+      "selection_name": "アウェイ勝利25～29点差",
+      "code": "A_25-29",
+      "odds": 14.4
+    },
+    {
+      "selection_number": 16,
+      "selection_name": "アウェイ勝利30点差以上",
+      "code": "A_30+",
+      "odds": 13.3
+    }
+  ]
+}

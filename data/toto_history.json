@@ -1,0 +1,4112 @@
+[
+  {
+    "round": 1460,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "秋田",
+        "score": "1－1",
+        "away": "熊本",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "富山",
+        "score": "1－2",
+        "away": "札幌",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "町田",
+        "score": "2－2",
+        "away": "Ｃ大阪",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "名古屋",
+        "score": "1－0",
+        "away": "柏",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "広島",
+        "score": "3－1",
+        "away": "FC東京",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "長崎",
+        "score": "1－1",
+        "away": "新潟",
+        "result": "D"
+      },
+      {
+        "no": "7",
+        "home": "愛媛",
+        "score": "1－0",
+        "away": "水戸",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "山形",
+        "score": "0－0",
+        "away": "大分",
+        "result": "D"
+      },
+      {
+        "no": "9",
+        "home": "岡山",
+        "score": "1－1",
+        "away": "鹿児島",
+        "result": "D"
+      },
+      {
+        "no": "10",
+        "home": "清水",
+        "score": "1－0",
+        "away": "藤枝",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "徳島",
+        "score": "0－1",
+        "away": "横浜FC",
+        "result": "A"
+      },
+      {
+        "no": "12",
+        "home": "山口",
+        "score": "1－2",
+        "away": "千葉",
+        "result": "A"
+      },
+      {
+        "no": "13",
+        "home": "栃木",
+        "score": "1－1",
+        "away": "群馬",
+        "result": "D"
+      }
+    ],
+    "toto_payout_1st": 23664020,
+    "toto_payout_2nd": 110230,
+    "toto_payout_3rd": 9210,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "秋田",
+        "score": "1－1",
+        "away": "熊本",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "富山",
+        "score": "1－2",
+        "away": "札幌",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "町田",
+        "score": "2－2",
+        "away": "Ｃ大阪",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "名古屋",
+        "score": "1－0",
+        "away": "柏",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "広島",
+        "score": "3－1",
+        "away": "FC東京",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 4760
+  },
+  {
+    "round": 1461,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "日本",
+        "score": "5－0",
+        "away": "シリア",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "韓国",
+        "score": "1－0",
+        "away": "中国",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "オマーン",
+        "score": "1－1",
+        "away": "キルギス",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "ＵＡＥ",
+        "score": "1－1",
+        "away": "バーレーン",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "サウジアラビア",
+        "score": "1－2",
+        "away": "ヨルダン",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "オーストラリア",
+        "score": "5－0",
+        "away": "パレスチナ",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "インドネシア",
+        "score": "2－0",
+        "away": "フィリピン",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "カタール",
+        "score": "2－1",
+        "away": "インド",
+        "result": "H"
+      },
+      {
+        "no": "9",
+        "home": "イラン",
+        "score": "0－0",
+        "away": "ウズベキスタン",
+        "result": "D"
+      },
+      {
+        "no": "10",
+        "home": "イラク",
+        "score": "3－1",
+        "away": "ベトナム",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "タイ",
+        "score": "3－1",
+        "away": "シンガポール",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "マレーシア",
+        "score": "3－1",
+        "away": "台湾",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "トルクメニスタン",
+        "score": "0－0",
+        "away": "香港",
+        "result": "D"
+      }
+    ],
+    "toto_payout_1st": 50670,
+    "toto_payout_2nd": 790,
+    "toto_payout_3rd": 150,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "日本",
+        "score": "5－0",
+        "away": "シリア",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "韓国",
+        "score": "1－0",
+        "away": "中国",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "オマーン",
+        "score": "1－1",
+        "away": "キルギス",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "ＵＡＥ",
+        "score": "1－1",
+        "away": "バーレーン",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "サウジアラビア",
+        "score": "1－2",
+        "away": "ヨルダン",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 4100
+  },
+  {
+    "round": 1462,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "横浜FM",
+        "score": "1－3",
+        "away": "町田",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "広島",
+        "score": "4－1",
+        "away": "東京Ｖ",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "Ｃ大阪",
+        "score": "2－1",
+        "away": "浦和",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "FC東京",
+        "score": "1－1",
+        "away": "磐田",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "Ｇ大阪",
+        "score": "2－1",
+        "away": "柏",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "京都",
+        "score": "2－0",
+        "away": "札幌",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "福岡",
+        "score": "2－0",
+        "away": "鳥栖",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "鹿島",
+        "score": "1－1",
+        "away": "新潟",
+        "result": "D"
+      },
+      {
+        "no": "9",
+        "home": "名古屋",
+        "score": "1－1",
+        "away": "湘南",
+        "result": "D"
+      },
+      {
+        "no": "10",
+        "home": "神戸",
+        "score": "1－0",
+        "away": "川崎Ｆ",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "仙台",
+        "score": "2－2",
+        "away": "長崎",
+        "result": "D"
+      },
+      {
+        "no": "12",
+        "home": "愛媛",
+        "score": "3－0",
+        "away": "清水",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "熊本",
+        "score": "0－1",
+        "away": "岡山",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 607190,
+    "toto_payout_3rd": 34420,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "横浜FM",
+        "score": "1－3",
+        "away": "町田",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "広島",
+        "score": "4－1",
+        "away": "東京Ｖ",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "Ｃ大阪",
+        "score": "2－1",
+        "away": "浦和",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "FC東京",
+        "score": "1－1",
+        "away": "磐田",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "Ｇ大阪",
+        "score": "2－1",
+        "away": "柏",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 5550
+  },
+  {
+    "round": 1463,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "町田",
+        "score": "0－0",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "Ｇ大阪",
+        "score": "2－1",
+        "away": "神戸",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "鳥栖",
+        "score": "3－0",
+        "away": "京都",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "浦和",
+        "score": "2－2",
+        "away": "鹿島",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "湘南",
+        "score": "0－1",
+        "away": "FC東京",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "札幌",
+        "score": "0－1",
+        "away": "横浜FM",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "東京Ｖ",
+        "score": "1－0",
+        "away": "名古屋",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "新潟",
+        "score": "2－2",
+        "away": "川崎Ｆ",
+        "result": "D"
+      },
+      {
+        "no": "9",
+        "home": "磐田",
+        "score": "1－1",
+        "away": "Ｃ大阪",
+        "result": "D"
+      },
+      {
+        "no": "10",
+        "home": "柏",
+        "score": "0－1",
+        "away": "広島",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "岡山",
+        "score": "1－0",
+        "away": "群馬",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "秋田",
+        "score": "3－1",
+        "away": "清水",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "山形",
+        "score": "1－1",
+        "away": "仙台",
+        "result": "D"
+      }
+    ],
+    "toto_payout_1st": 74094120,
+    "toto_payout_2nd": 399920,
+    "toto_payout_3rd": 23760,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "町田",
+        "score": "0－0",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "Ｇ大阪",
+        "score": "2－1",
+        "away": "神戸",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "鳥栖",
+        "score": "3－0",
+        "away": "京都",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "浦和",
+        "score": "2－2",
+        "away": "鹿島",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "湘南",
+        "score": "0－1",
+        "away": "FC東京",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 9690
+  },
+  {
+    "round": 1465,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "0－1",
+        "away": "新潟",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "横浜FM",
+        "score": "1－2",
+        "away": "東京Ｖ",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "Ｃ大阪",
+        "score": "2－1",
+        "away": "名古屋",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "FC東京",
+        "score": "0－1",
+        "away": "福岡",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "鳥栖",
+        "score": "1－4",
+        "away": "柏",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "Ｇ大阪",
+        "score": "1－3",
+        "away": "町田",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "浦和",
+        "score": "3－0",
+        "away": "磐田",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "湘南",
+        "score": "0－1",
+        "away": "京都",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "神戸",
+        "score": "3－1",
+        "away": "鹿島",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "川崎Ｆ",
+        "score": "1－1",
+        "away": "広島",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "いわき",
+        "score": "0－4",
+        "away": "横浜FC",
+        "result": "A"
+      },
+      {
+        "no": "12",
+        "home": "仙台",
+        "score": "3－2",
+        "away": "栃木",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "秋田",
+        "score": "0－3",
+        "away": "山形",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 30413840,
+    "toto_payout_2nd": 141670,
+    "toto_payout_3rd": 11650,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "0－1",
+        "away": "新潟",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "横浜FM",
+        "score": "1－2",
+        "away": "東京Ｖ",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "Ｃ大阪",
+        "score": "2－1",
+        "away": "名古屋",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "FC東京",
+        "score": "0－1",
+        "away": "福岡",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "鳥栖",
+        "score": "1－4",
+        "away": "柏",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 8560
+  },
+  {
+    "round": 1466,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "東京Ｖ",
+        "score": "1－1",
+        "away": "Ｃ大阪",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "磐田",
+        "score": "2－2",
+        "away": "川崎Ｆ",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "新潟",
+        "score": "3－4",
+        "away": "鳥栖",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "Ｇ大阪",
+        "score": "4－0",
+        "away": "横浜FM",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "柏",
+        "score": "3－2",
+        "away": "FC東京",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "鹿島",
+        "score": "2－0",
+        "away": "札幌",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "町田",
+        "score": "1－0",
+        "away": "名古屋",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "浦和",
+        "score": "2－3",
+        "away": "湘南",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "福岡",
+        "score": "1－2",
+        "away": "京都",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "愛媛",
+        "score": "0－4",
+        "away": "群馬",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "いわき",
+        "score": "0－1",
+        "away": "大分",
+        "result": "A"
+      },
+      {
+        "no": "12",
+        "home": "山形",
+        "score": "1－0",
+        "away": "栃木",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "岡山",
+        "score": "2－0",
+        "away": "仙台",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 7852740,
+    "toto_payout_3rd": 224360,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "東京Ｖ",
+        "score": "1－1",
+        "away": "Ｃ大阪",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "磐田",
+        "score": "2－2",
+        "away": "川崎Ｆ",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "新潟",
+        "score": "3－4",
+        "away": "鳥栖",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "Ｇ大阪",
+        "score": "4－0",
+        "away": "横浜FM",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "柏",
+        "score": "3－2",
+        "away": "FC東京",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 35310
+  },
+  {
+    "round": 1467,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "神戸",
+        "score": "2－0",
+        "away": "徳島",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "広島",
+        "score": "4－0",
+        "away": "いわき",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "湘南",
+        "score": "1－0",
+        "away": "東京Ｖ",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "京都",
+        "score": "3－1",
+        "away": "清水",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "横浜FM",
+        "score": "2－2",
+        "away": "水戸",
+        "result": "D"
+      },
+      {
+        "no": "6",
+        "home": "Ｃ大阪",
+        "score": "1－1",
+        "away": "甲府",
+        "result": "D"
+      },
+      {
+        "no": "7",
+        "home": "鹿島",
+        "score": "2－1",
+        "away": "藤枝",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "福岡",
+        "score": "0－2",
+        "away": "愛媛",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "札幌",
+        "score": "6－3",
+        "away": "山形",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "鳥栖",
+        "score": "3－1",
+        "away": "横浜FC",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "FC東京",
+        "score": "1－1",
+        "away": "千葉",
+        "result": "D"
+      },
+      {
+        "no": "12",
+        "home": "川崎Ｆ",
+        "score": "1－3",
+        "away": "大分",
+        "result": "A"
+      },
+      {
+        "no": "13",
+        "home": "新潟",
+        "score": "1－6",
+        "away": "長崎",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 1363200,
+    "toto_payout_3rd": 64910,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "神戸",
+        "score": "2－0",
+        "away": "徳島",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "広島",
+        "score": "4－0",
+        "away": "いわき",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "湘南",
+        "score": "1－0",
+        "away": "東京Ｖ",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "京都",
+        "score": "3－1",
+        "away": "清水",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "横浜FM",
+        "score": "2－2",
+        "away": "水戸",
+        "result": "D"
+      }
+    ],
+    "mini_a_payout_1st": 5120
+  },
+  {
+    "round": 1468,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "1－1",
+        "away": "神戸",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "東京Ｖ",
+        "score": "0－1",
+        "away": "町田",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "京都",
+        "score": "0－0",
+        "away": "浦和",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "広島",
+        "score": "1－0",
+        "away": "福岡",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "横浜FM",
+        "score": "4－1",
+        "away": "鹿島",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "FC東京",
+        "score": "2－0",
+        "away": "新潟",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "名古屋",
+        "score": "2－1",
+        "away": "柏",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "川崎Ｆ",
+        "score": "1－1",
+        "away": "Ｃ大阪",
+        "result": "D"
+      },
+      {
+        "no": "9",
+        "home": "湘南",
+        "score": "5－0",
+        "away": "磐田",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "鳥栖",
+        "score": "0－2",
+        "away": "Ｇ大阪",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "秋田",
+        "score": "1－0",
+        "away": "山口",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "徳島",
+        "score": "2－0",
+        "away": "仙台",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "藤枝",
+        "score": "0－1",
+        "away": "愛媛",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 56958610,
+    "toto_payout_2nd": 487100,
+    "toto_payout_3rd": 36210,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "1－1",
+        "away": "神戸",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "東京Ｖ",
+        "score": "0－1",
+        "away": "町田",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "京都",
+        "score": "0－0",
+        "away": "浦和",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "広島",
+        "score": "1－0",
+        "away": "福岡",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "横浜FM",
+        "score": "4－1",
+        "away": "鹿島",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 17620
+  },
+  {
+    "round": 1469,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "鹿島",
+        "score": "2－1",
+        "away": "FC東京",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "磐田",
+        "score": "1－2",
+        "away": "京都",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "神戸",
+        "score": "3－3",
+        "away": "名古屋",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "柏",
+        "score": "2－3",
+        "away": "川崎Ｆ",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "Ｃ大阪",
+        "score": "1－2",
+        "away": "新潟",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "鳥栖",
+        "score": "1－4",
+        "away": "広島",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "町田",
+        "score": "1－2",
+        "away": "横浜FM",
+        "result": "A"
+      },
+      {
+        "no": "8",
+        "home": "浦和",
+        "score": "3－4",
+        "away": "札幌",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "Ｇ大阪",
+        "score": "0－1",
+        "away": "湘南",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "福岡",
+        "score": "0－1",
+        "away": "東京Ｖ",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "金沢",
+        "score": "1－0",
+        "away": "八戸",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "讃岐",
+        "score": "0－0",
+        "away": "相模原",
+        "result": "D"
+      },
+      {
+        "no": "13",
+        "home": "岩手",
+        "score": "0－1",
+        "away": "富山",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 1210920,
+    "toto_payout_3rd": 65450,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "鹿島",
+        "score": "2－1",
+        "away": "FC東京",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "磐田",
+        "score": "1－2",
+        "away": "京都",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "神戸",
+        "score": "3－3",
+        "away": "名古屋",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "柏",
+        "score": "2－3",
+        "away": "川崎Ｆ",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "Ｃ大阪",
+        "score": "1－2",
+        "away": "新潟",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 29310
+  },
+  {
+    "round": 1471,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "群馬",
+        "score": "0－1",
+        "away": "甲府",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "Ｇ大阪",
+        "score": "0－0",
+        "away": "FC東京",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "川崎Ｆ",
+        "score": "3－0",
+        "away": "神戸",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "Ｃ大阪",
+        "score": "0－0",
+        "away": "町田",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "浦和",
+        "score": "0－0",
+        "away": "柏",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "湘南",
+        "score": "1－1",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "7",
+        "home": "横浜FM",
+        "score": "3－2",
+        "away": "札幌",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "鹿島",
+        "score": "3－0",
+        "away": "鳥栖",
+        "result": "H"
+      },
+      {
+        "no": "9",
+        "home": "東京Ｖ",
+        "score": "0－1",
+        "away": "広島",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "新潟",
+        "score": "2－2",
+        "away": "磐田",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "京都",
+        "score": "3－2",
+        "away": "名古屋",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "仙台",
+        "score": "2－1",
+        "away": "清水",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "いわき",
+        "score": "2－0",
+        "away": "秋田",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 15211000,
+    "toto_payout_2nd": 122050,
+    "toto_payout_3rd": 10090,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "群馬",
+        "score": "0－1",
+        "away": "甲府",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "Ｇ大阪",
+        "score": "0－0",
+        "away": "FC東京",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "川崎Ｆ",
+        "score": "3－0",
+        "away": "神戸",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "Ｃ大阪",
+        "score": "0－0",
+        "away": "町田",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "浦和",
+        "score": "0－0",
+        "away": "柏",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 6230
+  },
+  {
+    "round": 1472,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "2－2",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "町田",
+        "score": "0－1",
+        "away": "湘南",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "名古屋",
+        "score": "1－0",
+        "away": "東京Ｖ",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "鳥栖",
+        "score": "1－1",
+        "away": "浦和",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "横浜FM",
+        "score": "1－2",
+        "away": "神戸",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "広島",
+        "score": "2－0",
+        "away": "Ｃ大阪",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "柏",
+        "score": "0－0",
+        "away": "Ｇ大阪",
+        "result": "D"
+      },
+      {
+        "no": "8",
+        "home": "FC東京",
+        "score": "0－3",
+        "away": "川崎Ｆ",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "磐田",
+        "score": "2－1",
+        "away": "鹿島",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "いわき",
+        "score": "2－1",
+        "away": "愛媛",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "岡山",
+        "score": "0－0",
+        "away": "千葉",
+        "result": "D"
+      },
+      {
+        "no": "12",
+        "home": "秋田",
+        "score": "2－0",
+        "away": "鹿児島",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "清水",
+        "score": "4－0",
+        "away": "群馬",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 1015590,
+    "toto_payout_3rd": 41450,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "2－2",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "町田",
+        "score": "0－1",
+        "away": "湘南",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "名古屋",
+        "score": "1－0",
+        "away": "東京Ｖ",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "鳥栖",
+        "score": "1－1",
+        "away": "浦和",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "横浜FM",
+        "score": "1－2",
+        "away": "神戸",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 37760
+  },
+  {
+    "round": 1473,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "鹿島",
+        "score": "0－0",
+        "away": "浦和",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "川崎Ｆ",
+        "score": "1－3",
+        "away": "横浜FM",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "神戸",
+        "score": "2－2",
+        "away": "Ｇ大阪",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "FC東京",
+        "score": "0－0",
+        "away": "東京Ｖ",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "名古屋",
+        "score": "1－2",
+        "away": "広島",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "町田",
+        "score": "4－0",
+        "away": "磐田",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "湘南",
+        "score": "1－2",
+        "away": "柏",
+        "result": "A"
+      },
+      {
+        "no": "8",
+        "home": "Ｃ大阪",
+        "score": "3－5",
+        "away": "京都",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "福岡",
+        "score": "0－1",
+        "away": "新潟",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "山形",
+        "score": "4－2",
+        "away": "長崎",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "仙台",
+        "score": "1－0",
+        "away": "鹿児島",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "徳島",
+        "score": "1－1",
+        "away": "岡山",
+        "result": "D"
+      },
+      {
+        "no": "13",
+        "home": "藤枝",
+        "score": "3－0",
+        "away": "山口",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 617550,
+    "toto_payout_3rd": 32620,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "鹿島",
+        "score": "0－0",
+        "away": "浦和",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "川崎Ｆ",
+        "score": "1－3",
+        "away": "横浜FM",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "神戸",
+        "score": "2－2",
+        "away": "Ｇ大阪",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "FC東京",
+        "score": "0－0",
+        "away": "東京Ｖ",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "名古屋",
+        "score": "1－2",
+        "away": "広島",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 13870
+  },
+  {
+    "round": 1475,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "Ｇ大阪",
+        "score": "2－2",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "横浜FM",
+        "score": "4－0",
+        "away": "Ｃ大阪",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "東京Ｖ",
+        "score": "2－1",
+        "away": "鹿島",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "広島",
+        "score": "2－0",
+        "away": "柏",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "新潟",
+        "score": "0－0",
+        "away": "町田",
+        "result": "D"
+      },
+      {
+        "no": "6",
+        "home": "浦和",
+        "score": "0－0",
+        "away": "川崎Ｆ",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "京都",
+        "score": "3－0",
+        "away": "FC東京",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "磐田",
+        "score": "0－2",
+        "away": "札幌",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "神戸",
+        "score": "2－0",
+        "away": "鳥栖",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "湘南",
+        "score": "0－1",
+        "away": "名古屋",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "秋田",
+        "score": "0－0",
+        "away": "愛媛",
+        "result": "D"
+      },
+      {
+        "no": "12",
+        "home": "岡山",
+        "score": "0－0",
+        "away": "大分",
+        "result": "D"
+      },
+      {
+        "no": "13",
+        "home": "いわき",
+        "score": "3－4",
+        "away": "熊本",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 385860,
+    "toto_payout_3rd": 17700,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "Ｇ大阪",
+        "score": "2－2",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "横浜FM",
+        "score": "4－0",
+        "away": "Ｃ大阪",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "東京Ｖ",
+        "score": "2－1",
+        "away": "鹿島",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "広島",
+        "score": "2－0",
+        "away": "柏",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "新潟",
+        "score": "0－0",
+        "away": "町田",
+        "result": "D"
+      }
+    ],
+    "mini_a_payout_1st": 12000
+  },
+  {
+    "round": 1476,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "町田",
+        "score": "2－2",
+        "away": "浦和",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "広島",
+        "score": "3－2",
+        "away": "FC東京",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "名古屋",
+        "score": "0－0",
+        "away": "新潟",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "Ｃ大阪",
+        "score": "0－0",
+        "away": "Ｇ大阪",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "磐田",
+        "score": "0－0",
+        "away": "横浜FM",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "鳥栖",
+        "score": "1－2",
+        "away": "湘南",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "札幌",
+        "score": "2－0",
+        "away": "川崎Ｆ",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "柏",
+        "score": "2－3",
+        "away": "東京Ｖ",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "京都",
+        "score": "0－0",
+        "away": "鹿島",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "福岡",
+        "score": "0－2",
+        "away": "神戸",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "群馬",
+        "score": "1－0",
+        "away": "秋田",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "仙台",
+        "score": "2－0",
+        "away": "いわき",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "甲府",
+        "score": "1－0",
+        "away": "鹿児島",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 555580,
+    "toto_payout_2nd": 2250,
+    "toto_payout_3rd": 270,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "町田",
+        "score": "2－2",
+        "away": "浦和",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "広島",
+        "score": "3－2",
+        "away": "FC東京",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "名古屋",
+        "score": "0－0",
+        "away": "新潟",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "Ｃ大阪",
+        "score": "0－0",
+        "away": "Ｇ大阪",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "磐田",
+        "score": "0－0",
+        "away": "横浜FM",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 0
+  },
+  {
+    "round": 1478,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "清水",
+        "score": "1－1",
+        "away": "長崎",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "札幌",
+        "score": "3－1",
+        "away": "横浜FM",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "町田",
+        "score": "2－0",
+        "away": "新潟",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "甲府",
+        "score": "1－1",
+        "away": "川崎Ｆ",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "広島",
+        "score": "0－1",
+        "away": "名古屋",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "群馬",
+        "score": "0－0",
+        "away": "仙台",
+        "result": "D"
+      },
+      {
+        "no": "7",
+        "home": "千葉",
+        "score": "4－0",
+        "away": "水戸",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "藤枝",
+        "score": "1－0",
+        "away": "栃木",
+        "result": "H"
+      },
+      {
+        "no": "9",
+        "home": "愛媛",
+        "score": "1－4",
+        "away": "横浜FC",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "山口",
+        "score": "1－2",
+        "away": "徳島",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "岡山",
+        "score": "0－1",
+        "away": "秋田",
+        "result": "A"
+      },
+      {
+        "no": "12",
+        "home": "大分",
+        "score": "0－3",
+        "away": "山形",
+        "result": "A"
+      },
+      {
+        "no": "13",
+        "home": "鹿児島",
+        "score": "1－3",
+        "away": "いわき",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 30740920,
+    "toto_payout_2nd": 506710,
+    "toto_payout_3rd": 47050,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "清水",
+        "score": "1－1",
+        "away": "長崎",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "札幌",
+        "score": "3－1",
+        "away": "横浜FM",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "町田",
+        "score": "2－0",
+        "away": "新潟",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "甲府",
+        "score": "1－1",
+        "away": "川崎Ｆ",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "広島",
+        "score": "0－1",
+        "away": "名古屋",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 36310
+  },
+  {
+    "round": 1479,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "0－2",
+        "away": "東京Ｖ",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "鹿島",
+        "score": "2－2",
+        "away": "広島",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "柏",
+        "score": "0－2",
+        "away": "磐田",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "新潟",
+        "score": "3－1",
+        "away": "湘南",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "Ｇ大阪",
+        "score": "0－1",
+        "away": "浦和",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "福岡",
+        "score": "0－3",
+        "away": "町田",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "FC東京",
+        "score": "4－1",
+        "away": "名古屋",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "仙台",
+        "score": "2－3",
+        "away": "藤枝",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "徳島",
+        "score": "3－1",
+        "away": "大分",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "清水",
+        "score": "4－1",
+        "away": "山口",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "岡山",
+        "score": "3－0",
+        "away": "愛媛",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "いわき",
+        "score": "0－2",
+        "away": "長崎",
+        "result": "A"
+      },
+      {
+        "no": "13",
+        "home": "横浜FC",
+        "score": "1－0",
+        "away": "甲府",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 16271740,
+    "toto_payout_2nd": 60640,
+    "toto_payout_3rd": 4210,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "0－2",
+        "away": "東京Ｖ",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "鹿島",
+        "score": "2－2",
+        "away": "広島",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "柏",
+        "score": "0－2",
+        "away": "磐田",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "新潟",
+        "score": "3－1",
+        "away": "湘南",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "Ｇ大阪",
+        "score": "0－1",
+        "away": "浦和",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 19550
+  },
+  {
+    "round": 1481,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "鹿島",
+        "score": "0－0",
+        "away": "柏",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "浦和",
+        "score": "0－2",
+        "away": "FC東京",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "名古屋",
+        "score": "2－0",
+        "away": "川崎Ｆ",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "東京Ｖ",
+        "score": "2－0",
+        "away": "鳥栖",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "京都",
+        "score": "2－2",
+        "away": "Ｇ大阪",
+        "result": "D"
+      },
+      {
+        "no": "6",
+        "home": "町田",
+        "score": "0－0",
+        "away": "札幌",
+        "result": "D"
+      },
+      {
+        "no": "7",
+        "home": "磐田",
+        "score": "0－0",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "8",
+        "home": "新潟",
+        "score": "2－3",
+        "away": "神戸",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "湘南",
+        "score": "1－2",
+        "away": "Ｃ大阪",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "仙台",
+        "score": "2－2",
+        "away": "甲府",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "愛媛",
+        "score": "1－3",
+        "away": "山形",
+        "result": "A"
+      },
+      {
+        "no": "12",
+        "home": "徳島",
+        "score": "0－1",
+        "away": "いわき",
+        "result": "A"
+      },
+      {
+        "no": "13",
+        "home": "藤枝",
+        "score": "2－3",
+        "away": "清水",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 351160,
+    "toto_payout_3rd": 21760,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "鹿島",
+        "score": "0－0",
+        "away": "柏",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "浦和",
+        "score": "0－2",
+        "away": "FC東京",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "名古屋",
+        "score": "2－0",
+        "away": "川崎Ｆ",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "東京Ｖ",
+        "score": "2－0",
+        "away": "鳥栖",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "京都",
+        "score": "2－2",
+        "away": "Ｇ大阪",
+        "result": "D"
+      }
+    ],
+    "mini_a_payout_1st": 13380
+  },
+  {
+    "round": 1483,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "2－0",
+        "away": "京都",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "Ｇ大阪",
+        "score": "1－1",
+        "away": "東京Ｖ",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "湘南",
+        "score": "3－2",
+        "away": "鹿島",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "広島",
+        "score": "2－0",
+        "away": "町田",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "鳥栖",
+        "score": "0－0",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "6",
+        "home": "名古屋",
+        "score": "2－0",
+        "away": "磐田",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "Ｃ大阪",
+        "score": "0－0",
+        "away": "柏",
+        "result": "D"
+      },
+      {
+        "no": "8",
+        "home": "いわき",
+        "score": "0－0",
+        "away": "栃木",
+        "result": "D"
+      },
+      {
+        "no": "9",
+        "home": "愛媛",
+        "score": "1－2",
+        "away": "千葉",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "清水",
+        "score": "1－1",
+        "away": "横浜FC",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "秋田",
+        "score": "2－0",
+        "away": "徳島",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "岡山",
+        "score": "1－0",
+        "away": "長崎",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "甲府",
+        "score": "1－2",
+        "away": "山形",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 348130,
+    "toto_payout_3rd": 24390,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "札幌",
+        "score": "2－0",
+        "away": "京都",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "Ｇ大阪",
+        "score": "1－1",
+        "away": "東京Ｖ",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "湘南",
+        "score": "3－2",
+        "away": "鹿島",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "広島",
+        "score": "2－0",
+        "away": "町田",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "鳥栖",
+        "score": "0－0",
+        "away": "福岡",
+        "result": "D"
+      }
+    ],
+    "mini_a_payout_1st": 16050
+  },
+  {
+    "round": 1485,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "新潟",
+        "score": "0－4",
+        "away": "鹿島",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "FC東京",
+        "score": "1－1",
+        "away": "鳥栖",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "浦和",
+        "score": "0－1",
+        "away": "Ｃ大阪",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "柏",
+        "score": "1－0",
+        "away": "横浜FM",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "Ｇ大阪",
+        "score": "2－1",
+        "away": "札幌",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "町田",
+        "score": "1－4",
+        "away": "川崎Ｆ",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "京都",
+        "score": "2－3",
+        "away": "神戸",
+        "result": "A"
+      },
+      {
+        "no": "8",
+        "home": "東京Ｖ",
+        "score": "0－2",
+        "away": "湘南",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "磐田",
+        "score": "1－2",
+        "away": "広島",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "熊本",
+        "score": "1－2",
+        "away": "徳島",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "山形",
+        "score": "2－0",
+        "away": "山口",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "長崎",
+        "score": "4－1",
+        "away": "大分",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "仙台",
+        "score": "0－1",
+        "away": "秋田",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 70208820,
+    "toto_payout_2nd": 309590,
+    "toto_payout_3rd": 23810,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "新潟",
+        "score": "0－4",
+        "away": "鹿島",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "FC東京",
+        "score": "1－1",
+        "away": "鳥栖",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "浦和",
+        "score": "0－1",
+        "away": "Ｃ大阪",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "柏",
+        "score": "1－0",
+        "away": "横浜FM",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "Ｇ大阪",
+        "score": "2－1",
+        "away": "札幌",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 15930
+  },
+  {
+    "round": 1486,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "鳥取",
+        "score": "2－1",
+        "away": "岩手",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "奈良",
+        "score": "0－1",
+        "away": "FC大阪",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "新潟",
+        "score": "4－1",
+        "away": "川崎Ｆ",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "川崎Ｆ",
+        "score": "0－2",
+        "away": "新潟",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "名古屋",
+        "score": "1－2",
+        "away": "横浜FM",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "横浜FM",
+        "score": "1－3",
+        "away": "名古屋",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "岐阜",
+        "score": "2－1",
+        "away": "長野",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "今治",
+        "score": "3－1",
+        "away": "YS横浜",
+        "result": "H"
+      },
+      {
+        "no": "9",
+        "home": "北九州",
+        "score": "0－3",
+        "away": "八戸",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "琉球",
+        "score": "2－1",
+        "away": "相模原",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "宮崎",
+        "score": "1－1",
+        "away": "富山",
+        "result": "D"
+      },
+      {
+        "no": "12",
+        "home": "大宮",
+        "score": "3－2",
+        "away": "福島",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "松本",
+        "score": "1－1",
+        "away": "金沢",
+        "result": "D"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 458970,
+    "toto_payout_3rd": 32200,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "鳥取",
+        "score": "2－1",
+        "away": "岩手",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "奈良",
+        "score": "0－1",
+        "away": "FC大阪",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "新潟",
+        "score": "4－1",
+        "away": "川崎Ｆ",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "川崎Ｆ",
+        "score": "0－2",
+        "away": "新潟",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "名古屋",
+        "score": "1－2",
+        "away": "横浜FM",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 8430
+  },
+  {
+    "round": 1487,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "名古屋",
+        "score": "0－2",
+        "away": "札幌",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "鹿島",
+        "score": "0－0",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "京都",
+        "score": "2－0",
+        "away": "鳥栖",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "Ｃ大阪",
+        "score": "1－2",
+        "away": "磐田",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "東京Ｖ",
+        "score": "2－1",
+        "away": "浦和",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "柏",
+        "score": "1－1",
+        "away": "町田",
+        "result": "D"
+      },
+      {
+        "no": "7",
+        "home": "湘南",
+        "score": "2－1",
+        "away": "広島",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "徳島",
+        "score": "3－0",
+        "away": "藤枝",
+        "result": "H"
+      },
+      {
+        "no": "9",
+        "home": "熊本",
+        "score": "1－1",
+        "away": "山口",
+        "result": "D"
+      },
+      {
+        "no": "10",
+        "home": "仙台",
+        "score": "3－0",
+        "away": "横浜FC",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "岡山",
+        "score": "2－1",
+        "away": "いわき",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "大分",
+        "score": "0－0",
+        "away": "水戸",
+        "result": "D"
+      },
+      {
+        "no": "13",
+        "home": "秋田",
+        "score": "1－2",
+        "away": "長崎",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 2495340,
+    "toto_payout_3rd": 134880,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "名古屋",
+        "score": "0－2",
+        "away": "札幌",
+        "result": "A"
+      },
+      {
+        "no": "2",
+        "home": "鹿島",
+        "score": "0－0",
+        "away": "福岡",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "京都",
+        "score": "2－0",
+        "away": "鳥栖",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "Ｃ大阪",
+        "score": "1－2",
+        "away": "磐田",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "東京Ｖ",
+        "score": "2－1",
+        "away": "浦和",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 22410
+  },
+  {
+    "round": 1489,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "横浜FM",
+        "score": "2－2",
+        "away": "Ｇ大阪",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "神戸",
+        "score": "2－1",
+        "away": "京都",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "いわき",
+        "score": "1－2",
+        "away": "水戸",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "横浜FC",
+        "score": "2－4",
+        "away": "岡山",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "山口",
+        "score": "2－0",
+        "away": "甲府",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "藤枝",
+        "score": "2－3",
+        "away": "千葉",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "長崎",
+        "score": "4－1",
+        "away": "鹿児島",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "秋田",
+        "score": "0－2",
+        "away": "大分",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "愛媛",
+        "score": "0－2",
+        "away": "仙台",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "栃木",
+        "score": "0－1",
+        "away": "清水",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "山形",
+        "score": "1－0",
+        "away": "熊本",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "群馬",
+        "score": "0－2",
+        "away": "徳島",
+        "result": "A"
+      },
+      {
+        "no": "13",
+        "home": "琉球",
+        "score": "1－1",
+        "away": "八戸",
+        "result": "D"
+      }
+    ],
+    "toto_payout_1st": 7043500,
+    "toto_payout_2nd": 24400,
+    "toto_payout_3rd": 2170,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "横浜FM",
+        "score": "2－2",
+        "away": "Ｇ大阪",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "神戸",
+        "score": "2－1",
+        "away": "京都",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "いわき",
+        "score": "1－2",
+        "away": "水戸",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "横浜FC",
+        "score": "2－4",
+        "away": "岡山",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "山口",
+        "score": "2－0",
+        "away": "甲府",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 25840
+  },
+  {
+    "round": 1490,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "名古屋",
+        "score": "2－2",
+        "away": "新潟",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "広島",
+        "score": "0－1",
+        "away": "京都",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "札幌",
+        "score": "1－1",
+        "away": "Ｃ大阪",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "鳥栖",
+        "score": "2－1",
+        "away": "町田",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "FC東京",
+        "score": "0－2",
+        "away": "湘南",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "福岡",
+        "score": "2－1",
+        "away": "柏",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "岡山",
+        "score": "2－0",
+        "away": "藤枝",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "甲府",
+        "score": "1－2",
+        "away": "秋田",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "徳島",
+        "score": "1－0",
+        "away": "鹿児島",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "水戸",
+        "score": "1－3",
+        "away": "山形",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "清水",
+        "score": "1－0",
+        "away": "いわき",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "大分",
+        "score": "2－1",
+        "away": "群馬",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "千葉",
+        "score": "1－2",
+        "away": "長崎",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 36431290,
+    "toto_payout_2nd": 289130,
+    "toto_payout_3rd": 17380,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "名古屋",
+        "score": "2－2",
+        "away": "新潟",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "広島",
+        "score": "0－1",
+        "away": "京都",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "札幌",
+        "score": "1－1",
+        "away": "Ｃ大阪",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "鳥栖",
+        "score": "2－1",
+        "away": "町田",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "FC東京",
+        "score": "0－2",
+        "away": "湘南",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 62010
+  },
+  {
+    "round": 1492,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "湘南",
+        "score": "1－1",
+        "away": "札幌",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "鳥栖",
+        "score": "1－2",
+        "away": "横浜FM",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "鹿島",
+        "score": "0－0",
+        "away": "名古屋",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "Ｃ大阪",
+        "score": "1－0",
+        "away": "福岡",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "柏",
+        "score": "1－1",
+        "away": "新潟",
+        "result": "D"
+      },
+      {
+        "no": "6",
+        "home": "京都",
+        "score": "1－1",
+        "away": "川崎Ｆ",
+        "result": "D"
+      },
+      {
+        "no": "7",
+        "home": "磐田",
+        "score": "3－4",
+        "away": "Ｇ大阪",
+        "result": "A"
+      },
+      {
+        "no": "8",
+        "home": "東京Ｖ",
+        "score": "1－1",
+        "away": "神戸",
+        "result": "D"
+      },
+      {
+        "no": "9",
+        "home": "浦和",
+        "score": "3－0",
+        "away": "広島",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "町田",
+        "score": "3－0",
+        "away": "FC東京",
+        "result": "H"
+      },
+      {
+        "no": "11",
+        "home": "山口",
+        "score": "0－0",
+        "away": "横浜FC",
+        "result": "D"
+      },
+      {
+        "no": "12",
+        "home": "栃木",
+        "score": "0－0",
+        "away": "徳島",
+        "result": "D"
+      },
+      {
+        "no": "13",
+        "home": "山形",
+        "score": "4－0",
+        "away": "千葉",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 997250,
+    "toto_payout_3rd": 124650,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "湘南",
+        "score": "1－1",
+        "away": "札幌",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "鳥栖",
+        "score": "1－2",
+        "away": "横浜FM",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "鹿島",
+        "score": "0－0",
+        "away": "名古屋",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "Ｃ大阪",
+        "score": "1－0",
+        "away": "福岡",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "柏",
+        "score": "1－1",
+        "away": "新潟",
+        "result": "D"
+      }
+    ],
+    "mini_a_payout_1st": 11210
+  },
+  {
+    "round": 1493,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "オーストラリア",
+        "score": "0－0",
+        "away": "サウジアラビア",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "バーレーン",
+        "score": "0－1",
+        "away": "中国",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "クウェート",
+        "score": "1－3",
+        "away": "韓国",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "カタール",
+        "score": "3－2",
+        "away": "ウズベキスタン",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "インドネシア",
+        "score": "0－4",
+        "away": "日本",
+        "result": "A"
+      },
+      {
+        "no": "6",
+        "home": "パラグアイ",
+        "score": "2－1",
+        "away": "アルゼンチン",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "エクアドル",
+        "score": "4－0",
+        "away": "ボリビア",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "ウルグアイ",
+        "score": "3－2",
+        "away": "コロンビア",
+        "result": "H"
+      },
+      {
+        "no": "9",
+        "home": "ペルー",
+        "score": "0－0",
+        "away": "チリ",
+        "result": "D"
+      },
+      {
+        "no": "10",
+        "home": "ベネズエラ",
+        "score": "1－1",
+        "away": "ブラジル",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "ＵＡＥ",
+        "score": "3－0",
+        "away": "キルギス",
+        "result": "H"
+      },
+      {
+        "no": "12",
+        "home": "オマーン",
+        "score": "1－0",
+        "away": "パレスチナ",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "イラク",
+        "score": "0－0",
+        "away": "ヨルダン",
+        "result": "D"
+      }
+    ],
+    "toto_payout_1st": 82897710,
+    "toto_payout_2nd": 227570,
+    "toto_payout_3rd": 14280,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "オーストラリア",
+        "score": "0－0",
+        "away": "サウジアラビア",
+        "result": "D"
+      },
+      {
+        "no": "2",
+        "home": "バーレーン",
+        "score": "0－1",
+        "away": "中国",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "クウェート",
+        "score": "1－3",
+        "away": "韓国",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "カタール",
+        "score": "3－2",
+        "away": "ウズベキスタン",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "インドネシア",
+        "score": "0－4",
+        "away": "日本",
+        "result": "A"
+      }
+    ],
+    "mini_a_payout_1st": 6790
+  },
+  {
+    "round": 1495,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "シュツットガルト",
+        "score": "2－0",
+        "away": "ボーフム",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "ボルシアドルトムント",
+        "score": "4－0",
+        "away": "ＳＣフライブルク",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "バイヤーレヴァークーゼン",
+        "score": "5－2",
+        "away": "ハイデンハイム",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "ホッフェンハイム",
+        "score": "4－3",
+        "away": "ＲＢライプツィヒ",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "アイントラハトフランクフルト",
+        "score": "1－0",
+        "away": "ヴェルダーブレーメン",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "ＶｆＬヴォルフスブルク",
+        "score": "1－0",
+        "away": "ウニオンベルリン",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "アーセナル",
+        "score": "3－0",
+        "away": "ノッティンガムフォレスト",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "アストンヴィラ",
+        "score": "2－2",
+        "away": "クリスタルパレス",
+        "result": "D"
+      },
+      {
+        "no": "9",
+        "home": "ＡＦＣボーンマウス",
+        "score": "1－2",
+        "away": "ブライトンアンドホーヴアルビオ",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "レスターシティ",
+        "score": "1－2",
+        "away": "チェルシー",
+        "result": "A"
+      },
+      {
+        "no": "11",
+        "home": "マンチェスターシティ",
+        "score": "0－4",
+        "away": "トテナムホットスパー",
+        "result": "A"
+      },
+      {
+        "no": "12",
+        "home": "フラム",
+        "score": "1－4",
+        "away": "ウルヴァーハンプトンワンダラ",
+        "result": "A"
+      },
+      {
+        "no": "13",
+        "home": "エヴァートン",
+        "score": "0－0",
+        "away": "ブレントフォード",
+        "result": "D"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 276880,
+    "toto_payout_3rd": 13150,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "シュツットガルト",
+        "score": "2－0",
+        "away": "ボーフム",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "ボルシアドルトムント",
+        "score": "4－0",
+        "away": "ＳＣフライブルク",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "バイヤーレヴァークーゼン",
+        "score": "5－2",
+        "away": "ハイデンハイム",
+        "result": "H"
+      },
+      {
+        "no": "4",
+        "home": "ホッフェンハイム",
+        "score": "4－3",
+        "away": "ＲＢライプツィヒ",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "アイントラハトフランクフルト",
+        "score": "1－0",
+        "away": "ヴェルダーブレーメン",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 2890
+  },
+  {
+    "round": 1498,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "ＳＣフライブルク",
+        "score": "3－1",
+        "away": "ボルシアメンヘングラードバッ",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "ＦＣアウグスブルク",
+        "score": "1－0",
+        "away": "ボーフム",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "ヴェルダーブレーメン",
+        "score": "2－2",
+        "away": "シュツットガルト",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "ボルシアドルトムント",
+        "score": "1－1",
+        "away": "バイエルンミュンヘン",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "ＦＳＶマインツ０５",
+        "score": "2－0",
+        "away": "ホッフェンハイム",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "ＲＢライプツィヒ",
+        "score": "1－5",
+        "away": "ＶｆＬヴォルフスブルク",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "ウニオンベルリン",
+        "score": "1－2",
+        "away": "バイヤーレヴァークーゼン",
+        "result": "A"
+      },
+      {
+        "no": "8",
+        "home": "ハイデンハイム",
+        "score": "0－4",
+        "away": "アイントラハトフランクフルト",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "リヴァプール",
+        "score": "2－0",
+        "away": "マンチェスターシティ",
+        "result": "H"
+      },
+      {
+        "no": "10",
+        "home": "クリスタルパレス",
+        "score": "1－1",
+        "away": "ニューカッスルユナイテッド",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "ウェストハムユナイテッド",
+        "score": "2－5",
+        "away": "アーセナル",
+        "result": "A"
+      },
+      {
+        "no": "12",
+        "home": "チェルシー",
+        "score": "3－0",
+        "away": "アストンヴィラ",
+        "result": "H"
+      },
+      {
+        "no": "13",
+        "home": "ノッティンガムフォレスト",
+        "score": "1－0",
+        "away": "イプスウィッチタウン",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 3142620,
+    "toto_payout_2nd": 10880,
+    "toto_payout_3rd": 990,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "ＳＣフライブルク",
+        "score": "3－1",
+        "away": "ボルシアメンヘングラードバッ",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "ＦＣアウグスブルク",
+        "score": "1－0",
+        "away": "ボーフム",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "ヴェルダーブレーメン",
+        "score": "2－2",
+        "away": "シュツットガルト",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "ボルシアドルトムント",
+        "score": "1－1",
+        "away": "バイエルンミュンヘン",
+        "result": "D"
+      },
+      {
+        "no": "5",
+        "home": "ＦＳＶマインツ０５",
+        "score": "2－0",
+        "away": "ホッフェンハイム",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 7010
+  },
+  {
+    "round": 1500,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "バイエルンミュンヘン",
+        "score": "4－2",
+        "away": "ハイデンハイム",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "アイントラハトフランクフルト",
+        "score": "2－2",
+        "away": "ＦＣアウグスブルク",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "ボルシアメンヘングラードバッ",
+        "score": "1－1",
+        "away": "ボルシアドルトムント",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "ＶｆＬヴォルフスブルク",
+        "score": "4－3",
+        "away": "ＦＳＶマインツ０５",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "ホッフェンハイム",
+        "score": "1－1",
+        "away": "ＳＣフライブルク",
+        "result": "D"
+      },
+      {
+        "no": "6",
+        "home": "バイヤーレヴァークーゼン",
+        "score": "2－1",
+        "away": "ザンクトパウリ",
+        "result": "H"
+      },
+      {
+        "no": "7",
+        "home": "ボーフム",
+        "score": "0－1",
+        "away": "ヴェルダーブレーメン",
+        "result": "A"
+      },
+      {
+        "no": "8",
+        "home": "ホルスタインキール",
+        "score": "0－2",
+        "away": "ＲＢライプツィヒ",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "エヴァートン",
+        "score": "0－0",
+        "away": "リヴァプール",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "フラム",
+        "score": "1－1",
+        "away": "アーセナル",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "レスターシティ",
+        "score": "2－2",
+        "away": "ブライトンアンドホーヴアルビオ",
+        "result": "D"
+      },
+      {
+        "no": "12",
+        "home": "クリスタルパレス",
+        "score": "2－2",
+        "away": "マンチェスターシティ",
+        "result": "D"
+      },
+      {
+        "no": "13",
+        "home": "アストンヴィラ",
+        "score": "1－0",
+        "away": "サウザンプトン",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 2230860,
+    "toto_payout_2nd": 22760,
+    "toto_payout_3rd": 2320,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "バイエルンミュンヘン",
+        "score": "4－2",
+        "away": "ハイデンハイム",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "アイントラハトフランクフルト",
+        "score": "2－2",
+        "away": "ＦＣアウグスブルク",
+        "result": "D"
+      },
+      {
+        "no": "3",
+        "home": "ボルシアメンヘングラードバッ",
+        "score": "1－1",
+        "away": "ボルシアドルトムント",
+        "result": "D"
+      },
+      {
+        "no": "4",
+        "home": "ＶｆＬヴォルフスブルク",
+        "score": "4－3",
+        "away": "ＦＳＶマインツ０５",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "ホッフェンハイム",
+        "score": "1－1",
+        "away": "ＳＣフライブルク",
+        "result": "D"
+      }
+    ],
+    "mini_a_payout_1st": 10970
+  },
+  {
+    "round": 1502,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "ＦＳＶマインツ０５",
+        "score": "2－1",
+        "away": "バイエルンミュンヘン",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "ボルシアメンヘングラードバッ",
+        "score": "4－1",
+        "away": "ホルスタインキール",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "ＦＣアウグスブルク",
+        "score": "0－2",
+        "away": "バイヤーレヴァークーゼン",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "ハイデンハイム",
+        "score": "1－3",
+        "away": "シュツットガルト",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "ＲＢライプツィヒ",
+        "score": "2－1",
+        "away": "アイントラハトフランクフルト",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "ウニオンベルリン",
+        "score": "1－1",
+        "away": "ボーフム",
+        "result": "D"
+      },
+      {
+        "no": "7",
+        "home": "ザンクトパウリ",
+        "score": "0－2",
+        "away": "ヴェルダーブレーメン",
+        "result": "A"
+      },
+      {
+        "no": "8",
+        "home": "ボルシアドルトムント",
+        "score": "1－1",
+        "away": "ホッフェンハイム",
+        "result": "D"
+      },
+      {
+        "no": "9",
+        "home": "ブライトンアンドホーヴアルビオ",
+        "score": "1－3",
+        "away": "クリスタルパレス",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "アーセナル",
+        "score": "0－0",
+        "away": "エヴァートン",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "リヴァプール",
+        "score": "2－2",
+        "away": "フラム",
+        "result": "D"
+      },
+      {
+        "no": "12",
+        "home": "サウザンプトン",
+        "score": "0－5",
+        "away": "トテナムホットスパー",
+        "result": "A"
+      },
+      {
+        "no": "13",
+        "home": "マンチェスターシティ",
+        "score": "1－2",
+        "away": "マンチェスターユナイテッド",
+        "result": "A"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 3686490,
+    "toto_payout_3rd": 100990,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "ＦＳＶマインツ０５",
+        "score": "2－1",
+        "away": "バイエルンミュンヘン",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "ボルシアメンヘングラードバッ",
+        "score": "4－1",
+        "away": "ホルスタインキール",
+        "result": "H"
+      },
+      {
+        "no": "3",
+        "home": "ＦＣアウグスブルク",
+        "score": "0－2",
+        "away": "バイヤーレヴァークーゼン",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "ハイデンハイム",
+        "score": "1－3",
+        "away": "シュツットガルト",
+        "result": "A"
+      },
+      {
+        "no": "5",
+        "home": "ＲＢライプツィヒ",
+        "score": "2－1",
+        "away": "アイントラハトフランクフルト",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 5750
+  },
+  {
+    "round": 1503,
+    "toto_13_matches": [
+      {
+        "no": "1",
+        "home": "ホルスタインキール",
+        "score": "5－1",
+        "away": "ＦＣアウグスブルク",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "アイントラハトフランクフルト",
+        "score": "1－3",
+        "away": "ＦＳＶマインツ０５",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "ホッフェンハイム",
+        "score": "1－2",
+        "away": "ボルシアメンヘングラードバッ",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "バイヤーレヴァークーゼン",
+        "score": "5－1",
+        "away": "ＳＣフライブルク",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "ボーフム",
+        "score": "2－0",
+        "away": "ハイデンハイム",
+        "result": "H"
+      },
+      {
+        "no": "6",
+        "home": "シュツットガルト",
+        "score": "0－1",
+        "away": "ザンクトパウリ",
+        "result": "A"
+      },
+      {
+        "no": "7",
+        "home": "ヴェルダーブレーメン",
+        "score": "4－1",
+        "away": "ウニオンベルリン",
+        "result": "H"
+      },
+      {
+        "no": "8",
+        "home": "ＶｆＬヴォルフスブルク",
+        "score": "1－3",
+        "away": "ボルシアドルトムント",
+        "result": "A"
+      },
+      {
+        "no": "9",
+        "home": "クリスタルパレス",
+        "score": "1－5",
+        "away": "アーセナル",
+        "result": "A"
+      },
+      {
+        "no": "10",
+        "home": "ウェストハムユナイテッド",
+        "score": "1－1",
+        "away": "ブライトンアンドホーヴアルビオ",
+        "result": "D"
+      },
+      {
+        "no": "11",
+        "home": "トテナムホットスパー",
+        "score": "3－6",
+        "away": "リヴァプール",
+        "result": "A"
+      },
+      {
+        "no": "12",
+        "home": "フラム",
+        "score": "0－0",
+        "away": "サウザンプトン",
+        "result": "D"
+      },
+      {
+        "no": "13",
+        "home": "アストンヴィラ",
+        "score": "2－1",
+        "away": "マンチェスターシティ",
+        "result": "H"
+      }
+    ],
+    "toto_payout_1st": 0,
+    "toto_payout_2nd": 3076060,
+    "toto_payout_3rd": 69380,
+    "mini_a_matches": [
+      {
+        "no": "1",
+        "home": "ホルスタインキール",
+        "score": "5－1",
+        "away": "ＦＣアウグスブルク",
+        "result": "H"
+      },
+      {
+        "no": "2",
+        "home": "アイントラハトフランクフルト",
+        "score": "1－3",
+        "away": "ＦＳＶマインツ０５",
+        "result": "A"
+      },
+      {
+        "no": "3",
+        "home": "ホッフェンハイム",
+        "score": "1－2",
+        "away": "ボルシアメンヘングラードバッ",
+        "result": "A"
+      },
+      {
+        "no": "4",
+        "home": "バイヤーレヴァークーゼン",
+        "score": "5－1",
+        "away": "ＳＣフライブルク",
+        "result": "H"
+      },
+      {
+        "no": "5",
+        "home": "ボーフム",
+        "score": "2－0",
+        "away": "ハイデンハイム",
+        "result": "H"
+      }
+    ],
+    "mini_a_payout_1st": 14870
+  }
+]

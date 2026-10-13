@@ -1,0 +1,15 @@
+metric,value
+evaluation_period,2026-10-13 to Present
+target_sport,Soccer & Basketball
+strategy_name,Conservative_Value
+total_monitored_matches,0
+total_orders_placed,0
+active_bet_rate,0.0%
+initial_capital_jpy,100000
+current_balance_jpy,100000
+net_profit_jpy,0
+realized_roi_pct,0.0%
+win_rate_pct,0.0%
+max_drawdown_pct,0.0%
+hash_integrity_status,VERIFIED_SECURE
+power_analysis_progress_pct,0.0%

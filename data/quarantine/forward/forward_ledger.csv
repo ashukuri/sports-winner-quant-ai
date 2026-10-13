@@ -1,0 +1,1 @@
+tx_id,timestamp_locked,match_id,kickoff_time,home_team,away_team,selected_category,predicted_prob,observed_odds,odds_obs_time,predicted_ev,bet_cost,prev_balance,locked_sha256,timestamp_settled,actual_score,winning_category,is_hit,official_payout,net_profit,new_balance,ledger_chain_hash

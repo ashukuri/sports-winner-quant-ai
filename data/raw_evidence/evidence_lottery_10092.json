@@ -1,0 +1,1348 @@
+{
+  "gameDetail": {
+    "lotteryId": 10092,
+    "lotteryTypeId": 2,
+    "commodityId": "50",
+    "holdCountId": "0423",
+    "holdCountName": "第423回",
+    "unitPrice": 200,
+    "lotHoldQuitFlag": false,
+    "commodityName": "B.PREMIER 2026/10/02 千葉J vs A東京",
+    "salesStartDatetime": "2026-09-27T23:00:00.000000Z",
+    "salesEndDatetime": "2026-10-02T09:55:00.000000Z",
+    "isPreliminaryResultPublished": true,
+    "isFinalResultPublished": true,
+    "lotoCatch": {
+      "mainCatch": null,
+      "subCatch": [],
+      "focusPoint": null,
+      "focusPointSource": null
+    },
+    "gameDate": "2026-10-02T10:05:00.000000Z",
+    "gameYear": 2026,
+    "lotoName": null,
+    "gameStage": " ",
+    "gamePeriod": "0",
+    "gameFight": 2,
+    "gameLeagueAssortmentId": "BR",
+    "gameLeagueAssortment": "B.PREMIER",
+    "homeTeamId": 330,
+    "homeTeamAbbrev": "千葉J",
+    "homeTeamName": "千葉ジェッツ",
+    "homeLeagueAssortmentName": "B.PREMIER",
+    "homeTeamRank": 6,
+    "homeTeamRegion": "東",
+    "awayTeamId": 331,
+    "awayTeamAbbrev": "A東京",
+    "awayTeamName": "アルバルク東京",
+    "awayLeagueAssortmentName": "B.PREMIER",
+    "awayTeamRank": 9,
+    "awayTeamRegion": "東",
+    "homeAwayFlg": true,
+    "gameStadium": "ららアリ",
+    "gameReferee": null,
+    "refundStartDate": "2026-10-05T23:00:00.000000Z",
+    "refundEndDate": "2027-10-05T14:00:00.000000Z",
+    "resultAnnounceScheduleDay": "2026-10-02T15:00:00.000000Z",
+    "oddsUpdateDatetime": "2026-10-03T00:49:00.000000Z",
+    "gameUpdateDatetime": "2026-10-02T09:55:04.000000Z",
+    "voteRateUpdateDatetime": "2026-10-03T00:49:00.000000Z",
+    "voteRate": {
+      "homeTeamWin": 47,
+      "awayTeamWin": 53
+    },
+    "homeTeamConsecutive": {
+      "win": 0,
+      "lose": 1
+    },
+    "awayTeamConsecutive": {
+      "win": 0,
+      "lose": 1
+    },
+    "homeTeamScore": 131,
+    "awayTeamScore": 138,
+    "repayDecisionDate": null,
+    "repayStartDatetime": null,
+    "repayEndDatetime": null
+  },
+  "matchupRecord": {
+    "total": {
+      "gameCount": 46,
+      "homeWinCount": 27,
+      "awayWinCount": 19,
+      "homeScoreAvg": 76.7,
+      "awayScoreAvg": 73.2,
+      "frequentPastResult": [
+        {
+          "selectionNumber": 4,
+          "pastCount": "6"
+        },
+        {
+          "selectionNumber": 1,
+          "pastCount": "5"
+        },
+        {
+          "selectionNumber": 2,
+          "pastCount": "5"
+        },
+        {
+          "selectionNumber": 10,
+          "pastCount": "5"
+        },
+        {
+          "selectionNumber": 12,
+          "pastCount": "5"
+        }
+      ]
+    },
+    "home": {
+      "gameCount": 22,
+      "homeWinCount": 15,
+      "awayWinCount": 7,
+      "homeScoreAvg": 80.8,
+      "awayScoreAvg": 73.8,
+      "frequentPastResult": [
+        {
+          "selectionNumber": 1,
+          "pastCount": "4"
+        },
+        {
+          "selectionNumber": 4,
+          "pastCount": "4"
+        },
+        {
+          "selectionNumber": 12,
+          "pastCount": "3"
+        }
+      ]
+    }
+  },
+  "recent5Games": {
+    "home": [
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BR",
+        "gameLeagueAssortment": "B.PREMIER",
+        "homeTeamId": 348,
+        "homeTeamName": "東京SR",
+        "awayTeamId": 330,
+        "awayTeamName": "千葉J",
+        "isHome": false,
+        "homeAwayFlg": true,
+        "homeTeamScore": "95",
+        "awayTeamScore": "79",
+        "commodityId": "5C",
+        "holdCountId": "0420",
+        "scoreInfo": [
+          {
+            "playerName": "ネイト・ウィリアムズ",
+            "playerScores": 28
+          },
+          {
+            "playerName": "渡邊 雄太",
+            "playerScores": 18
+          },
+          {
+            "playerName": "金近 廉",
+            "playerScores": 11
+          },
+          {
+            "playerName": "ルーク・メイ",
+            "playerScores": 8
+          },
+          {
+            "playerName": "富樫 勇樹",
+            "playerScores": 5
+          },
+          {
+            "playerName": "ウィリアムス ニカ",
+            "playerScores": 4
+          },
+          {
+            "playerName": "原 修太",
+            "playerScores": 3
+          },
+          {
+            "playerName": "瀬川 琉久",
+            "playerScores": 2
+          }
+        ]
+      },
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BR",
+        "gameLeagueAssortment": "B.PREMIER",
+        "homeTeamId": 348,
+        "homeTeamName": "東京SR",
+        "awayTeamId": 330,
+        "awayTeamName": "千葉J",
+        "isHome": false,
+        "homeAwayFlg": true,
+        "homeTeamScore": "92",
+        "awayTeamScore": "97",
+        "commodityId": "54",
+        "holdCountId": "0420",
+        "scoreInfo": [
+          {
+            "playerName": "ネイト・ウィリアムズ",
+            "playerScores": 27
+          },
+          {
+            "playerName": "富樫 勇樹",
+            "playerScores": 25
+          },
+          {
+            "playerName": "ルーク・メイ",
+            "playerScores": 18
+          },
+          {
+            "playerName": "瀬川 琉久",
+            "playerScores": 8
+          },
+          {
+            "playerName": "ウィリアムス ニカ",
+            "playerScores": 6
+          },
+          {
+            "playerName": "金近 廉",
+            "playerScores": 6
+          },
+          {
+            "playerName": "渡邊 雄太",
+            "playerScores": 5
+          },
+          {
+            "playerName": "原 修太",
+            "playerScores": 2
+          }
+        ]
+      },
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BC",
+        "gameLeagueAssortment": "BリーグCS",
+        "homeTeamId": 356,
+        "homeTeamName": "長崎",
+        "awayTeamId": 330,
+        "awayTeamName": "千葉J",
+        "isHome": false,
+        "homeAwayFlg": false,
+        "homeTeamScore": "102",
+        "awayTeamScore": "93",
+        "commodityId": "52",
+        "holdCountId": "0388",
+        "scoreInfo": [
+          {
+            "playerName": "ディー・ジェイ・ホグ",
+            "playerScores": 20
+          },
+          {
+            "playerName": "ナシール・リトル",
+            "playerScores": 19
+          },
+          {
+            "playerName": "渡邊 雄太",
+            "playerScores": 16
+          },
+          {
+            "playerName": "富樫 勇樹",
+            "playerScores": 12
+          },
+          {
+            "playerName": "西村 文男",
+            "playerScores": 9
+          },
+          {
+            "playerName": "瀬川 琉久",
+            "playerScores": 8
+          },
+          {
+            "playerName": "ギャリソン・ブルックス",
+            "playerScores": 6
+          },
+          {
+            "playerName": "金近 廉",
+            "playerScores": 2
+          },
+          {
+            "playerName": "田代 直希",
+            "playerScores": 1
+          }
+        ]
+      },
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BC",
+        "gameLeagueAssortment": "BリーグCS",
+        "homeTeamId": 356,
+        "homeTeamName": "長崎",
+        "awayTeamId": 330,
+        "awayTeamName": "千葉J",
+        "isHome": false,
+        "homeAwayFlg": false,
+        "homeTeamScore": "82",
+        "awayTeamScore": "74",
+        "commodityId": "51",
+        "holdCountId": "0388",
+        "scoreInfo": [
+          {
+            "playerName": "渡邊 雄太",
+            "playerScores": 24
+          },
+          {
+            "playerName": "ディー・ジェイ・ホグ",
+            "playerScores": 15
+          },
+          {
+            "playerName": "ナシール・リトル",
+            "playerScores": 11
+          },
+          {
+            "playerName": "富樫 勇樹",
+            "playerScores": 8
+          },
+          {
+            "playerName": "田代 直希",
+            "playerScores": 5
+          },
+          {
+            "playerName": "ギャリソン・ブルックス",
+            "playerScores": 5
+          },
+          {
+            "playerName": "金近 廉",
+            "playerScores": 4
+          },
+          {
+            "playerName": "西村 文男",
+            "playerScores": 2
+          }
+        ]
+      },
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BC",
+        "gameLeagueAssortment": "BリーグCS",
+        "homeTeamId": 330,
+        "homeTeamName": "千葉J",
+        "awayTeamId": 336,
+        "awayTeamName": "群馬",
+        "isHome": true,
+        "homeAwayFlg": false,
+        "homeTeamScore": "72",
+        "awayTeamScore": "68",
+        "commodityId": "59",
+        "holdCountId": "0386",
+        "scoreInfo": [
+          {
+            "playerName": "ナシール・リトル",
+            "playerScores": 20
+          },
+          {
+            "playerName": "金近 廉",
+            "playerScores": 14
+          },
+          {
+            "playerName": "渡邊 雄太",
+            "playerScores": 11
+          },
+          {
+            "playerName": "富樫 勇樹",
+            "playerScores": 8
+          },
+          {
+            "playerName": "原 修太",
+            "playerScores": 6
+          },
+          {
+            "playerName": "ディー・ジェイ・ホグ",
+            "playerScores": 6
+          },
+          {
+            "playerName": "田代 直希",
+            "playerScores": 5
+          },
+          {
+            "playerName": "瀬川 琉久",
+            "playerScores": 2
+          }
+        ]
+      }
+    ],
+    "away": [
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BR",
+        "gameLeagueAssortment": "B.PREMIER",
+        "homeTeamId": 331,
+        "homeTeamName": "A東京",
+        "awayTeamId": 327,
+        "awayTeamName": "琉球",
+        "isHome": true,
+        "homeAwayFlg": true,
+        "homeTeamScore": "74",
+        "awayTeamScore": "85",
+        "commodityId": "51",
+        "holdCountId": "0418",
+        "scoreInfo": [
+          {
+            "playerName": "キヨンテ・ジョンソン",
+            "playerScores": 16
+          },
+          {
+            "playerName": "ラクラン・オルブリッチ",
+            "playerScores": 15
+          },
+          {
+            "playerName": "ライアン・ロシター",
+            "playerScores": 11
+          },
+          {
+            "playerName": "ディー・ジェイ・ホグ",
+            "playerScores": 11
+          },
+          {
+            "playerName": "小酒部 泰暉",
+            "playerScores": 8
+          },
+          {
+            "playerName": "安藤 周人",
+            "playerScores": 7
+          },
+          {
+            "playerName": "テーブス 海",
+            "playerScores": 6
+          }
+        ]
+      },
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BR",
+        "gameLeagueAssortment": "B.PREMIER",
+        "homeTeamId": 331,
+        "homeTeamName": "A東京",
+        "awayTeamId": 327,
+        "awayTeamName": "琉球",
+        "isHome": true,
+        "homeAwayFlg": true,
+        "homeTeamScore": "84",
+        "awayTeamScore": "73",
+        "commodityId": "50",
+        "holdCountId": "0418",
+        "scoreInfo": [
+          {
+            "playerName": "キヨンテ・ジョンソン",
+            "playerScores": 29
+          },
+          {
+            "playerName": "ディー・ジェイ・ホグ",
+            "playerScores": 23
+          },
+          {
+            "playerName": "小酒部 泰暉",
+            "playerScores": 13
+          },
+          {
+            "playerName": "ラクラン・オルブリッチ",
+            "playerScores": 7
+          },
+          {
+            "playerName": "ライアン・ロシター",
+            "playerScores": 4
+          },
+          {
+            "playerName": "安藤 周人",
+            "playerScores": 4
+          },
+          {
+            "playerName": "テーブス 海",
+            "playerScores": 3
+          },
+          {
+            "playerName": "ザック・バランスキー",
+            "playerScores": 1
+          }
+        ]
+      },
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BC",
+        "gameLeagueAssortment": "BリーグCS",
+        "homeTeamId": 356,
+        "homeTeamName": "長崎",
+        "awayTeamId": 331,
+        "awayTeamName": "A東京",
+        "isHome": false,
+        "homeAwayFlg": false,
+        "homeTeamScore": "96",
+        "awayTeamScore": "56",
+        "commodityId": "51",
+        "holdCountId": "0386",
+        "scoreInfo": [
+          {
+            "playerName": "ブランドン・デイヴィス",
+            "playerScores": 15
+          },
+          {
+            "playerName": "安藤 周人",
+            "playerScores": 8
+          },
+          {
+            "playerName": "セバスチャン・サイズ",
+            "playerScores": 8
+          },
+          {
+            "playerName": "マーカス・フォスター",
+            "playerScores": 6
+          },
+          {
+            "playerName": "福澤 晃平",
+            "playerScores": 5
+          },
+          {
+            "playerName": "大倉 颯太",
+            "playerScores": 5
+          },
+          {
+            "playerName": "ザック・バランスキー",
+            "playerScores": 4
+          },
+          {
+            "playerName": "中村 浩陸",
+            "playerScores": 3
+          },
+          {
+            "playerName": "ライアン・ロシター",
+            "playerScores": 2
+          }
+        ]
+      },
+      {
+        "gamePeriod": "",
+        "gameLeagueAssortmentId": "BC",
+        "gameLeagueAssortment": "BリーグCS",
+        "homeTeamId": 356,
+        "homeTeamName": "長崎",
+        "awayTeamId": 331,
+        "awayTeamName": "A東京",
+        "isHome": false,
+        "homeAwayFlg": false,
+        "homeTeamScore": "93",
+        "awayTeamScore": "78",
+        "commodityId": "50",
+        "holdCountId": "0386",
+        "scoreInfo": [
+          {
+            "playerName": "ブランドン・デイヴィス",
+            "playerScores": 14
+          },
+          {
+            "playerName": "ライアン・ロシター",
+            "playerScores": 12
+          },
+          {
+            "playerName": "マーカス・フォスター",
+            "playerScores": 12
+          },
+          {
+            "playerName": "セバスチャン・サイズ",
+            "playerScores": 10
+          },
+          {
+            "playerName": "テーブス 海",
+            "playerScores": 9
+          },
+          {
+            "playerName": "安藤 周人",
+            "playerScores": 8
+          },
+          {
+            "playerName": "小酒部 泰暉",
+            "playerScores": 7
+          },
+          {
+            "playerName": "ザック・バランスキー",
+            "playerScores": 2
+          },
+          {
+            "playerName": "中村 浩陸",
+            "playerScores": 2
+          },
+          {
+            "playerName": "大倉 颯太",
+            "playerScores": 2
+          }
+        ]
+      },
+      {
+        "gamePeriod": "36",
+        "gameLeagueAssortmentId": "B1",
+        "gameLeagueAssortment": "B1",
+        "homeTeamId": 328,
+        "homeTeamName": "北海道",
+        "awayTeamId": 331,
+        "awayTeamName": "A東京",
+        "isHome": false,
+        "homeAwayFlg": true,
+        "homeTeamScore": "97",
+        "awayTeamScore": "96",
+        "commodityId": "5K",
+        "holdCountId": "0379",
+        "scoreInfo": [
+          {
+            "playerName": "セバスチャン・サイズ",
+            "playerScores": 18
+          },
+          {
+            "playerName": "安藤 周人",
+            "playerScores": 16
+          },
+          {
+            "playerName": "ブランドン・デイヴィス",
+            "playerScores": 16
+          },
+          {
+            "playerName": "マーカス・フォスター",
+            "playerScores": 16
+          },
+          {
+            "playerName": "ライアン・ロシター",
+            "playerScores": 12
+          },
+          {
+            "playerName": "小酒部 泰暉",
+            "playerScores": 8
+          },
+          {
+            "playerName": "ザック・バランスキー",
+            "playerScores": 3
+          },
+          {
+            "playerName": "中村 浩陸",
+            "playerScores": 3
+          },
+          {
+            "playerName": "大倉 颯太",
+            "playerScores": 2
+          },
+          {
+            "playerName": "テーブス 海",
+            "playerScores": 2
+          }
+        ]
+      }
+    ]
+  },
+  "playerInfo": {
+    "home": {
+      "startingMemberInfo": [
+        {
+          "playerId": 51000467,
+          "playerName": "瀬川 琉久",
+          "playerPos": "PG"
+        },
+        {
+          "playerId": 51000383,
+          "playerName": "佐藤 巧",
+          "playerPos": "SF"
+        },
+        {
+          "playerId": 51000641,
+          "playerName": "ネイト・ウィリアムズ",
+          "playerPos": "SF"
+        },
+        {
+          "playerId": 51000428,
+          "playerName": "渡邊 雄太",
+          "playerPos": "SF/PF"
+        },
+        {
+          "playerId": 51000374,
+          "playerName": "ルーク・メイ",
+          "playerPos": "SF/PF"
+        }
+      ],
+      "backUpPlayerInfo": [
+        {
+          "playerId": 9055,
+          "playerName": "富樫 勇樹",
+          "playerPos": "PG"
+        },
+        {
+          "playerId": 8656,
+          "playerName": "田代 直希",
+          "playerPos": "SG/SF"
+        },
+        {
+          "playerId": 8584,
+          "playerName": "原 修太",
+          "playerPos": "SG/SF"
+        },
+        {
+          "playerId": 51000267,
+          "playerName": "金近 廉",
+          "playerPos": "SF"
+        },
+        {
+          "playerId": 51000564,
+          "playerName": "深水 虎太郎",
+          "playerPos": "SF"
+        },
+        {
+          "playerId": 51000345,
+          "playerName": "菅原 佳依",
+          "playerPos": "SF"
+        },
+        {
+          "playerId": 8582,
+          "playerName": "荒尾 岳",
+          "playerPos": "PF"
+        },
+        {
+          "playerId": 9345,
+          "playerName": "ウィリアムス ニカ",
+          "playerPos": "C"
+        }
+      ],
+      "injuredPlayerInfo": [
+        {
+          "playerId": 51000642,
+          "playerName": "マット・コステロ",
+          "injuredDetail": "左第4･5中足骨骨間靭帯損傷・腓骨筋炎"
+        },
+        {
+          "playerId": 51000643,
+          "playerName": "ブランドン・ランドルフ",
+          "injuredDetail": "左ハムストリング筋損傷"
+        }
+      ]
+    },
+    "away": {
+      "startingMemberInfo": [
+        {
+          "playerId": 30438,
+          "playerName": "テーブス 海",
+          "playerPos": "PG"
+        },
+        {
+          "playerId": 10815,
+          "playerName": "安藤 周人",
+          "playerPos": "SG"
+        },
+        {
+          "playerId": 51000647,
+          "playerName": "キヨンテ・ジョンソン",
+          "playerPos": "SF"
+        },
+        {
+          "playerId": 51000430,
+          "playerName": "ディー・ジェイ・ホグ",
+          "playerPos": "SF/PF"
+        },
+        {
+          "playerId": 8649,
+          "playerName": "ライアン・ロシター",
+          "playerPos": "C/PF"
+        }
+      ],
+      "backUpPlayerInfo": [
+        {
+          "playerId": 30351,
+          "playerName": "大倉 颯太",
+          "playerPos": "PG/SG"
+        },
+        {
+          "playerId": 30349,
+          "playerName": "中村 浩陸",
+          "playerPos": "PG/SG"
+        },
+        {
+          "playerId": 30348,
+          "playerName": "小酒部 泰暉",
+          "playerPos": "SG"
+        },
+        {
+          "playerId": 15826,
+          "playerName": "飯田 遼",
+          "playerPos": "SG/SF"
+        },
+        {
+          "playerId": 9031,
+          "playerName": "ザック・バランスキー",
+          "playerPos": "SF/PF"
+        },
+        {
+          "playerId": 51000648,
+          "playerName": "ラクラン・オルブリッチ",
+          "playerPos": "C/PF"
+        },
+        {
+          "playerId": 15838,
+          "playerName": "平岩 玄",
+          "playerPos": "C"
+        }
+      ],
+      "injuredPlayerInfo": []
+    }
+  },
+  "purchaseResult": {
+    "selectionResult": [],
+    "prizeDividendTtl": 0
+  },
+  "selections": [
+    {
+      "odds": "7.3",
+      "selectionNumber": 1,
+      "selectionName": "ホーム勝利1～3点差",
+      "selectionAbbrev": "ホーム勝利1～3点差",
+      "selectionWinPattern": 1,
+      "voteCount": null
+    },
+    {
+      "odds": "5.9",
+      "selectionNumber": 2,
+      "selectionName": "ホーム勝利4～6点差",
+      "selectionAbbrev": "ホーム勝利4～6点差",
+      "selectionWinPattern": 1,
+      "voteCount": null
+    },
+    {
+      "odds": "5.0",
+      "selectionNumber": 3,
+      "selectionName": "ホーム勝利7～9点差",
+      "selectionAbbrev": "ホーム勝利7～9点差",
+      "selectionWinPattern": 1,
+      "voteCount": null
+    },
+    {
+      "odds": "5.9",
+      "selectionNumber": 4,
+      "selectionName": "ホーム勝利10～14点差",
+      "selectionAbbrev": "ホーム勝利10～14点差",
+      "selectionWinPattern": 1,
+      "voteCount": null
+    },
+    {
+      "odds": "8.1",
+      "selectionNumber": 5,
+      "selectionName": "ホーム勝利15～19点差",
+      "selectionAbbrev": "ホーム勝利15～19点差",
+      "selectionWinPattern": 1,
+      "voteCount": null
+    },
+    {
+      "odds": "13.4",
+      "selectionNumber": 6,
+      "selectionName": "ホーム勝利20～24点差",
+      "selectionAbbrev": "ホーム勝利20～24点差",
+      "selectionWinPattern": 1,
+      "voteCount": null
+    },
+    {
+      "odds": "29.4",
+      "selectionNumber": 7,
+      "selectionName": "ホーム勝利25～29点差",
+      "selectionAbbrev": "ホーム勝利25～29点差",
+      "selectionWinPattern": 1,
+      "voteCount": null
+    },
+    {
+      "odds": "25.2",
+      "selectionNumber": 8,
+      "selectionName": "ホーム勝利30点差以上",
+      "selectionAbbrev": "ホーム勝利30点差以上",
+      "selectionWinPattern": 1,
+      "voteCount": null
+    },
+    {
+      "odds": "7.9",
+      "selectionNumber": 9,
+      "selectionName": "アウェイ勝利1～3点差",
+      "selectionAbbrev": "アウェイ勝利1～3点差",
+      "selectionWinPattern": 2,
+      "voteCount": null
+    },
+    {
+      "odds": "6.8",
+      "selectionNumber": 10,
+      "selectionName": "アウェイ勝利4～6点差",
+      "selectionAbbrev": "アウェイ勝利4～6点差",
+      "selectionWinPattern": 2,
+      "voteCount": null
+    },
+    {
+      "odds": "5.4",
+      "selectionNumber": 11,
+      "selectionName": "アウェイ勝利7～9点差",
+      "selectionAbbrev": "アウェイ勝利7～9点差",
+      "selectionWinPattern": 2,
+      "voteCount": null
+    },
+    {
+      "odds": "4.7",
+      "selectionNumber": 12,
+      "selectionName": "アウェイ勝利10～14点差",
+      "selectionAbbrev": "アウェイ勝利10～14点差",
+      "selectionWinPattern": 2,
+      "voteCount": null
+    },
+    {
+      "odds": "6.4",
+      "selectionNumber": 13,
+      "selectionName": "アウェイ勝利15～19点差",
+      "selectionAbbrev": "アウェイ勝利15～19点差",
+      "selectionWinPattern": 2,
+      "voteCount": null
+    },
+    {
+      "odds": "10.0",
+      "selectionNumber": 14,
+      "selectionName": "アウェイ勝利20～24点差",
+      "selectionAbbrev": "アウェイ勝利20～24点差",
+      "selectionWinPattern": 2,
+      "voteCount": null
+    },
+    {
+      "odds": "14.4",
+      "selectionNumber": 15,
+      "selectionName": "アウェイ勝利25～29点差",
+      "selectionAbbrev": "アウェイ勝利25～29点差",
+      "selectionWinPattern": 2,
+      "voteCount": null
+    },
+    {
+      "odds": "13.3",
+      "selectionNumber": 16,
+      "selectionName": "アウェイ勝利30点差以上",
+      "selectionAbbrev": "アウェイ勝利30点差以上",
+      "selectionWinPattern": 2,
+      "voteCount": null
+    }
+  ],
+  "lotoResult": [
+    {
+      "prizeRank": 1,
+      "prizeWinNumber": 737,
+      "selectionNumbers": [
+        "11"
+      ],
+      "perVotePrize": 1080,
+      "totalPrize": 795960
+    }
+  ],
+  "nextInsaleGames": [],
+  "DLLoto": [
+    {
+      "lotteryId": 10233,
+      "lotteryTypeId": 1,
+      "commodityId": "20",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "リーグカップ戦 2026/10/14 横浜FC vs 浦和",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:20:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T09:30:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": "0",
+      "gamePeriod": "3",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "N",
+      "gameLeagueAssortment": "リーグカップ戦",
+      "homeTeamId": 32,
+      "homeTeamAbbrev": "横浜FC",
+      "homeTeamName": "横浜ＦＣ",
+      "homeLeagueAssortmentName": "J2",
+      "homeTeamRank": 5,
+      "homeTeamRegion": null,
+      "awayTeamId": 22,
+      "awayTeamAbbrev": "浦和",
+      "awayTeamName": "浦和レッズ",
+      "awayLeagueAssortmentName": "J1",
+      "awayTeamRank": 11,
+      "awayTeamRegion": null,
+      "homeAwayFlg": false
+    },
+    {
+      "lotteryId": 10234,
+      "lotteryTypeId": 1,
+      "commodityId": "21",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "リーグカップ戦 2026/10/14 水戸 vs FC東京",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:50:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:00:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": "0",
+      "gamePeriod": "3",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "N",
+      "gameLeagueAssortment": "リーグカップ戦",
+      "homeTeamId": 20,
+      "homeTeamAbbrev": "水戸",
+      "homeTeamName": "水戸ホーリーホック",
+      "homeLeagueAssortmentName": "J1",
+      "homeTeamRank": 13,
+      "homeTeamRegion": null,
+      "awayTeamId": 28,
+      "awayTeamAbbrev": "FC東京",
+      "awayTeamName": "ＦＣ東京",
+      "awayLeagueAssortmentName": "J1",
+      "awayTeamRank": 4,
+      "awayTeamRegion": null,
+      "homeAwayFlg": false
+    },
+    {
+      "lotteryId": 10235,
+      "lotteryTypeId": 1,
+      "commodityId": "22",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "リーグカップ戦 2026/10/14 横浜FM vs 清水",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:50:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:00:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": "0",
+      "gamePeriod": "3",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "N",
+      "gameLeagueAssortment": "リーグカップ戦",
+      "homeTeamId": 31,
+      "homeTeamAbbrev": "横浜FM",
+      "homeTeamName": "横浜Ｆ・マリノス",
+      "homeLeagueAssortmentName": "J1",
+      "homeTeamRank": 7,
+      "homeTeamRegion": null,
+      "awayTeamId": 8,
+      "awayTeamAbbrev": "清水",
+      "awayTeamName": "清水エスパルス",
+      "awayLeagueAssortmentName": "J1",
+      "awayTeamRank": 10,
+      "awayTeamRegion": null,
+      "homeAwayFlg": false
+    },
+    {
+      "lotteryId": 10236,
+      "lotteryTypeId": 1,
+      "commodityId": "23",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "リーグカップ戦 2026/10/14 松本 vs 広島",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:50:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:00:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": "0",
+      "gamePeriod": "3",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "N",
+      "gameLeagueAssortment": "リーグカップ戦",
+      "homeTeamId": 44,
+      "homeTeamAbbrev": "松本",
+      "homeTeamName": "松本山雅ＦＣ",
+      "homeLeagueAssortmentName": "J3",
+      "homeTeamRank": 13,
+      "homeTeamRegion": null,
+      "awayTeamId": 15,
+      "awayTeamAbbrev": "広島",
+      "awayTeamName": "サンフレッチェ広島",
+      "awayLeagueAssortmentName": "J1",
+      "awayTeamRank": 2,
+      "awayTeamRegion": null,
+      "homeAwayFlg": false
+    },
+    {
+      "lotteryId": 10237,
+      "lotteryTypeId": 1,
+      "commodityId": "24",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "リーグカップ戦 2026/10/14 磐田 vs 川崎Ｆ",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:50:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:00:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": "0",
+      "gamePeriod": "3",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "N",
+      "gameLeagueAssortment": "リーグカップ戦",
+      "homeTeamId": 9,
+      "homeTeamAbbrev": "磐田",
+      "homeTeamName": "ジュビロ磐田",
+      "homeLeagueAssortmentName": "J2",
+      "homeTeamRank": 11,
+      "homeTeamRegion": null,
+      "awayTeamId": 30,
+      "awayTeamAbbrev": "川崎Ｆ",
+      "awayTeamName": "川崎フロンターレ",
+      "awayLeagueAssortmentName": "J1",
+      "awayTeamRank": 8,
+      "awayTeamRegion": null,
+      "homeAwayFlg": false
+    },
+    {
+      "lotteryId": 10238,
+      "lotteryTypeId": 1,
+      "commodityId": "25",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "リーグカップ戦 2026/10/14 名古屋 vs 岡山",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:50:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:00:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": "0",
+      "gamePeriod": "3",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "N",
+      "gameLeagueAssortment": "リーグカップ戦",
+      "homeTeamId": 10,
+      "homeTeamAbbrev": "名古屋",
+      "homeTeamName": "名古屋グランパス",
+      "homeLeagueAssortmentName": "J1",
+      "homeTeamRank": 15,
+      "homeTeamRegion": null,
+      "awayTeamId": 41,
+      "awayTeamAbbrev": "岡山",
+      "awayTeamName": "ファジアーノ岡山",
+      "awayLeagueAssortmentName": "J1",
+      "awayTeamRank": 9,
+      "awayTeamRegion": null,
+      "homeAwayFlg": false
+    },
+    {
+      "lotteryId": 10239,
+      "lotteryTypeId": 1,
+      "commodityId": "26",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "リーグカップ戦 2026/10/14 鳥取 vs Ｃ大阪",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:50:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:00:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": "0",
+      "gamePeriod": "3",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "N",
+      "gameLeagueAssortment": "リーグカップ戦",
+      "homeTeamId": 43,
+      "homeTeamAbbrev": "鳥取",
+      "homeTeamName": "ガイナーレ鳥取",
+      "homeLeagueAssortmentName": "J3",
+      "homeTeamRank": 12,
+      "homeTeamRegion": null,
+      "awayTeamId": 13,
+      "awayTeamAbbrev": "Ｃ大阪",
+      "awayTeamName": "セレッソ大阪",
+      "awayLeagueAssortmentName": "J1",
+      "awayTeamRank": 12,
+      "awayTeamRegion": null,
+      "homeAwayFlg": false
+    },
+    {
+      "lotteryId": 10240,
+      "lotteryTypeId": 1,
+      "commodityId": "27",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "リーグカップ戦 2026/10/14 鳥栖 vs 福岡",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:50:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:00:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": "0",
+      "gamePeriod": "3",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "N",
+      "gameLeagueAssortment": "リーグカップ戦",
+      "homeTeamId": 26,
+      "homeTeamAbbrev": "鳥栖",
+      "homeTeamName": "サガン鳥栖",
+      "homeLeagueAssortmentName": "J2",
+      "homeTeamRank": 15,
+      "homeTeamRegion": null,
+      "awayTeamId": 16,
+      "awayTeamAbbrev": "福岡",
+      "awayTeamName": "アビスパ福岡",
+      "awayLeagueAssortmentName": "J1",
+      "awayTeamRank": 17,
+      "awayTeamRegion": null,
+      "homeAwayFlg": false
+    },
+    {
+      "lotteryId": 10247,
+      "lotteryTypeId": 2,
+      "commodityId": "56",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "B.ONE 2026/10/14 鹿児島 vs 青森",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:55:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:05:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": " ",
+      "gamePeriod": "4",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "BO",
+      "gameLeagueAssortment": "B.ONE",
+      "homeTeamId": 497,
+      "homeTeamAbbrev": "鹿児島",
+      "homeTeamName": "鹿児島レブナイズ",
+      "homeLeagueAssortmentName": "B.ONE",
+      "homeTeamRank": 5,
+      "homeTeamRegion": "南",
+      "awayTeamId": 332,
+      "awayTeamAbbrev": "青森",
+      "awayTeamName": "青森ワッツ",
+      "awayLeagueAssortmentName": "B.ONE",
+      "awayTeamRank": 4,
+      "awayTeamRegion": "北",
+      "homeAwayFlg": true
+    },
+    {
+      "lotteryId": 10248,
+      "lotteryTypeId": 2,
+      "commodityId": "57",
+      "holdCountId": "0426",
+      "holdCountName": "第426回",
+      "unitPrice": 200,
+      "lotHoldQuitFlag": false,
+      "commodityName": "B.ONE 2026/10/14 福岡 vs 横浜EX",
+      "salesStartDatetime": "2026-10-08T23:00:00.000000Z",
+      "salesEndDatetime": "2026-10-14T09:55:00.000000Z",
+      "isPreliminaryResultPublished": false,
+      "isFinalResultPublished": false,
+      "lotoCatch": {
+        "mainCatch": null,
+        "subCatch": [],
+        "focusPoint": null,
+        "focusPointSource": null
+      },
+      "gameDate": "2026-10-14T10:05:00.000000Z",
+      "gameYear": 2026,
+      "lotoName": null,
+      "gameStage": " ",
+      "gamePeriod": "4",
+      "gameFight": 2,
+      "gameLeagueAssortmentId": "BO",
+      "gameLeagueAssortment": "B.ONE",
+      "homeTeamId": 353,
+      "homeTeamAbbrev": "福岡",
+      "homeTeamName": "ライジングゼファー福岡",
+      "homeLeagueAssortmentName": "B.ONE",
+      "homeTeamRank": 2,
+      "homeTeamRegion": "南",
+      "awayTeamId": 337,
+      "awayTeamAbbrev": "横浜EX",
+      "awayTeamName": "横浜エクセレンス",
+      "awayLeagueAssortmentName": "B.ONE",
+      "awayTeamRank": 1,
+      "awayTeamRegion": "中",
+      "homeAwayFlg": true
+    }
+  ],
+  "reviewLoto": [],
+  "cartItemCount": 0
+}

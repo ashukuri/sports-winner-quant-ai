@@ -1,0 +1,77 @@
+<div class="rc-gameScore__score -##gameLeagueAssortmentId## -basketball">
+                    <div class="rc-gameScore__inner">
+                      <div class="rc-gameScore__timer rp-countdownTimer"
+                       data-timer-start="##salesStartDatetime##"
+                       data-timer-end="##salesEndDatetime##"
+                       data-timer-suspended="##lotHoldQuitFlag##"
+                       data-timer-result="##$resultPublished##"
+                       data-timer-expand = "false"
+                       data-timer-exclusive = "true"
+                       data-timer-target=".rc-gameScore__ticket, .rc-gameScore__rate, .rp-toggleContent, .rn-floatingBottomNavi, .rc-gameOdds, .rp-countdownTimer--target"
+                      >
+                        <span class="rp-countdownTimer__beforeSales">販売開始 ##$salesStartDate## ##$salesStartTime##</span>
+                        <span class="rp-countdownTimer__onGoing"><i class="ra-winner-timer-red"></i>販売締め切りまで<em></em></span>
+                        <span class="rp-countdownTimer__approaching"><i class="ra-winner-timer-red"></i>まもなく販売締め切り</span>
+                        <span class="rp-countdownTimer__expired"><i class="ra-winner-timer-red"></i>販売終了</span>
+                        <span class="rp-countdownTimer__endGame"><i class="ra-winner-timer-red"></i>試合終了</span>
+                      </div>
+                      <div class="rc-gameScore__teamStatusWrap">
+                        <div class="rc-gameScore__teamStatus">
+                          <p class="rc-gameScore__label rp-win-or-lose -home">##$homeTeamConsecutiveWin##</p>
+                          <i class="rc-gameScore__teamLogo ra-winner-basketball-league-##homeTeamId##"></i>
+                          <p class="rc-gameScore__teamName">##homeTeamAbbrev##</p>
+                          <p class="rc-gameScore__rank">
+                            <span class="ru-d-inline-block">##homeLeagueAssortmentName##&nbsp;</span><span class="ru-d-inline-block">##homeTeamRegion####$homeTeamRank##位</span>
+                          </p>
+                        </div>
+                        <div class="rc-gameScore__gameDetail" data-home-away="##homeAwayFlg##">
+                          <p class="rc-gameScore__point">
+                            <span>##$homeTeamScore##</span>
+                            <span class="rc-gameScore__separate">:</span>
+                            <span>##$awayTeamScore##</span>
+                          </p>
+                          <p class="rc-gameScore__venue -home">HOME</p>
+                          <p class="rc-gameScore__venue -away">AWAY</p>
+                        </div>
+                        <div class="rc-gameScore__teamStatus">
+                          <p class="rc-gameScore__label rp-win-or-lose -away">##$awayTeamConsecutiveWin##</p>
+                          <i class="rc-gameScore__teamLogo ra-winner-basketball-league-##awayTeamId##"></i>
+                          <p class="rc-gameScore__teamName">##awayTeamAbbrev##</p>
+                          <p class="rc-gameScore__rank">
+                            <span class="ru-d-inline-block">##awayLeagueAssortmentName##&nbsp;</span><span class="ru-d-inline-block">##awayTeamRegion####$awayTeamRank##位</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rc-gameScore__info -singleMatch">
+                    <div class="rc-gameScore__infoBlock">
+                      <p class="rc-gameScore__text -date -calendar">##$gameDate##</p>
+                      <p class="rc-gameScore__text -startTime -timer">試合開始予定##$gameTime##</p>
+                    </div>
+                    <p class="rc-gameScore__text -soldOut -fintimer">販売終了##$salesEndScoreTime##</p>
+                    <div class="rc-gameScore__infoBlock">
+                      <p class="rc-gameScore__stadium">##gameStadium##</p>
+                      <p class="rc-gameScore__umpire">主審：<span>##gameReferee##</span></p>
+                    </div>
+                  </div>
+                  <ul class="rc-lotteryDetails__updateInfoList -matchdate">
+                    <li class="rc-lotteryDetails__updateInfoItem">##$gameUpdateDatetime##</li>
+                  </ul>
+                  <div class="rc-gameScore__rate">
+                    <p class="rc-gameScore__rateTitle"><i class="ra-winner-multi-user-outlined"></i>みんなの投票</p>
+                    <div class="rc-gameScore__voteContainer">
+                      <p class="rc-gameScore__text -homeTeamWin"><span>##homeTeamAbbrev##</span>勝利<span class="rc-gameScore__data">##homeTeamWin##%</span></p>
+                      <p class="rc-gameScore__text -awayTeamWin"><span>##awayTeamAbbrev##</span>勝利<span class="rc-gameScore__data">##awayTeamWin##%</span></p>
+                    </div>
+                    <div class="rc-gameScore__chart">
+                      <span class="js-getChartValue -homeTeamWin" data-value="##homeTeamWin##"></span>
+                      <span class="js-getChartValue -awayTeamWin" data-value="##awayTeamWin##"></span>
+                    </div>
+                    <ul class="rc-lotteryDetails__updateInfoList">
+                      <li class="rc-lotteryDetails__updateInfoItem -ratio"><span>##$voteRateUpdateDatetime##</span></li>
+                    </ul>
+                  </div>
+                  <div class="rc-gameScore__textLink">
+                    <a class="rc-gameScore__anchorLink rp-smoothScroll" href="#lotteryDetails">くじ情報詳細</a>
+                  </div>
