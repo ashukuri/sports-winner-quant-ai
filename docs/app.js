@@ -183,6 +183,12 @@ function loadPresetMatch(lotteryId) {
   document.getElementById("matchTitle").textContent = fixture.commodity_name;
   currentSport = fixture.sport;
 
+  // 公式オッズページリンクを更新
+  const linkEl = document.getElementById("officialMatchLink");
+  if (linkEl) {
+    linkEl.href = `https://winner.toto.rakuten.co.jp/detail/singlematch/${lotteryId}/`;
+  }
+
   // オッズ設定
   currentOdds = {};
   if (fixture.odds && Object.keys(fixture.odds).length > 0) {
@@ -232,6 +238,12 @@ function initEventListeners() {
     currentSport = e.target.value;
     evaluateMatch();
   });
+
+  // サンプルオッズ投入ボタン
+  const sampleBtn = document.getElementById("sampleOddsBtn");
+  if (sampleBtn) {
+    sampleBtn.addEventListener("click", injectSampleOdds);
+  }
 
   // チーム名変更
   document.getElementById("homeTeamInput").addEventListener("input", evaluateMatch);
@@ -451,43 +463,82 @@ function renderOddsTable(analysis, bestBet) {
   });
 }
 
-// 7. 貼り付けオッズのスマートパーサー
+// 7. 貼り付けオッズの超強力スマートパーサー
 function parsePastedOdds() {
-  const text = document.getElementById("pasteOddsInput").value;
-  if (!text) return;
+  let text = document.getElementById("pasteOddsInput").value;
+  if (!text || !text.trim()) {
+    alert("コピーしたテキストを貼り付けてください。");
+    return;
+  }
 
-  const lines = text.split("\n");
+  // 全角英数・記号の半角化
+  text = text.replace(/[！-～]/g, s => String.fromCharCode(s.charCodeAt(0) - 0xFEE0));
+  text = text.replace(/　/g, " ");
+
+  const choices = currentSport === "Basketball" ? BASKETBALL_CHOICES : SOCCER_CHOICES;
   let updatedCount = 0;
 
-  // パターン1: "1 5.6" または "H_1-3 7.3"
-  // パターン2: "5.6倍"
-  const choices = currentSport === "Basketball" ? BASKETBALL_CHOICES : SOCCER_CHOICES;
-  
+  // 方法A: 選択肢名/コードと数値の正規表現マッチング
   choices.forEach(ch => {
-    // 選択肢コードや名前の付近の数値を検索
-    const regex = new RegExp(`(${ch.code}|${ch.num}|${ch.name.slice(0, 4)}).*?(\\d+\\.\\d+)`, "i");
-    const m = text.match(regex);
-    if (m && m[2]) {
-      currentOdds[ch.num] = parseFloat(m[2]);
-      updatedCount++;
+    // 例: "1-0 5.6", "H_1-3 7.3倍", "1～3点差 7.3"
+    const patterns = [
+      new RegExp(`(?:${ch.code}|${ch.num}|${ch.name.slice(0, 4)})[^\\d]*?(\\d+(?:\\.\\d+)?)\\s*倍?`, "i"),
+      new RegExp(`(?:^|\\s)${ch.num}\\s*[:：\\-]?\\s*(\\d+(?:\\.\\d+)?)\\s*倍?`, "im")
+    ];
+    for (const regex of patterns) {
+      const m = text.match(regex);
+      if (m && m[1]) {
+        const val = parseFloat(m[1]);
+        if (val >= 1.0 && val <= 500.0) {
+          currentOdds[ch.num] = val;
+          updatedCount++;
+          break;
+        }
+      }
     }
   });
 
-  // 単純な数値リスト形式のフォールバック
-  if (updatedCount < 5) {
-    const numbers = text.match(/(\d+\.\d+)/g);
-    if (numbers && numbers.length >= choices.length) {
+  // 方法B: マッチ数が少ない場合、テキスト内に出現する全数値を順番に割り当て
+  if (updatedCount < 6) {
+    // 1.0以上の小数をすべて抽出 (1.0〜500.0)
+    const allNumbers = (text.match(/\b\d+(?:\.\d+)?\b/g) || [])
+      .map(Number)
+      .filter(n => n >= 1.0 && n <= 500.0 && n !== 200 && n !== 100); // 1口200円等を除外
+
+    if (allNumbers.length >= choices.length) {
       choices.forEach((ch, idx) => {
-        currentOdds[ch.num] = parseFloat(numbers[idx]);
+        currentOdds[ch.num] = allNumbers[idx];
         updatedCount++;
       });
     }
   }
 
-  if (updatedCount > 0) {
-    alert(`オッズを自動抽出・反映しました (${updatedCount}件の選択肢)`);
+  if (updatedCount >= 5) {
+    alert(`🎉 オッズを自動抽出・反映しました！ (${updatedCount}件の選択肢)`);
     evaluateMatch();
   } else {
-    alert("オッズ数値を検出できませんでした。数値を直接テーブルに入力するか、オッズ表をそのまま貼り付けてください。");
+    alert(`⚠️ オッズを十分に検出できませんでした (${updatedCount}件検出)。\n公式画面の「〇〇倍」という文字が含まれる部分を指やマウスで選択してコピーしてください。`);
   }
+}
+
+// 8. サンプルオッズ投入 (即座に判定を体験できる機能)
+function injectSampleOdds() {
+  const choices = currentSport === "Basketball" ? BASKETBALL_CHOICES : SOCCER_CHOICES;
+  
+  if (currentSport === "Basketball") {
+    // バスケ16択の標準的オッズ分布 (人気〜大穴)
+    const sampleB = [6.2, 5.4, 5.1, 5.8, 8.2, 14.5, 32.0, 26.0, 8.5, 7.2, 5.8, 5.0, 6.5, 11.0, 16.0, 14.5];
+    choices.forEach((ch, idx) => {
+      currentOdds[ch.num] = sampleB[idx];
+    });
+  } else {
+    // サッカー18択の標準的オッズ分布
+    const sampleS = [5.6, 6.8, 5.1, 14.3, 14.9, 20.2, 10.4, 6.1, 4.1, 9.2, 50.0, 5.0, 10.7, 6.4, 24.5, 15.6, 22.9, 13.7];
+    choices.forEach((ch, idx) => {
+      currentOdds[ch.num] = sampleS[idx];
+    });
+  }
+  
+  evaluateMatch();
+  alert("🎲 標準的な市場サンプルオッズを投入しました！AIの判定結果を確認してください。");
 }
