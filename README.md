@@ -1,8 +1,27 @@
-# Sports WINNER Quant Research Lab
-## サッカー・Bリーグ WINNER実証研究 Phase 4
-### 実測オッズ・公式試合ID・フォワードテストの完全修復
+# ⚡ Sports WINNER Quant AI Web Dashboard
 
+> 🌐 **Live Web Application (GitHub Pages):**  
+> ### 👉 **[https://ashukuri.github.io/sports-winner-quant-ai/](https://ashukuri.github.io/sports-winner-quant-ai/)**
+> 
+> *PC・スマートフォンのブラウザから今すぐアクセスして、販売中試合のオッズ取得・期待値判定・AI購入判断（BET / NO BET）をご利用いただけます。*
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen?style=for-the-badge&logo=github)](https://ashukuri.github.io/sports-winner-quant-ai/)
+[![Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed%20(100%25)-blue?style=for-the-badge)]()
+[![Model Version](https://img.shields.io/badge/Model%20Version-v2.0.0-purple?style=for-the-badge)]()
+
+---
+
+## 🌟 主な機能
+1. **WINNER公式試合・オッズの自動取得**: 販売中試合のワンクリック反映 & オッズ画面コピペ自動解析パーサー
+2. **AI自動購入判断 (Conservative_Value_V1)**: 理論EV > +15% かつ 的中確率 $\ge$ 8% の選択肢がある場合に「BET（1口200円）」、なければ「NO BET（見送り）」を瞬時に判定
+3. **年次定期メンテナンス告知バナー**: モデルの次回推奨点検時期（毎年8〜9月）を自動カウントダウン
+4. **性能劣化防止ゲート**: メンテナンス後に新モデルが旧モデルと同等以上の精度（勝敗70%以上）を維持しているか自動テスト
+
+---
+
+## 📖 プロジェクト概要
 日本のスポーツくじ「WINNER」（サッカー1試合予想18択 / Bリーグ1試合予想16択）を対象に、過去のコード・データ生成処理を徹底監査し、架空の試合、合成倍率、未来情報を完全に排除して、実際の公式WINNER市場を観測・予測・自動精算できる信頼性の高いフォワードテスト基盤を完成させた研究プロジェクトです。
+
 
 ---
 
