@@ -1,0 +1,45 @@
+name: Scheduled WINNER Odds & Fixture Auto-Update
+
+on:
+  schedule:
+    # 毎日 00:00, 06:00, 12:00 UTC (日本時間 09:00, 15:00, 21:00) に自動更新
+    - cron: '0 0,6,12 * * *'
+  workflow_dispatch: # GitHubのUIから手動実行ボタンを押しても即座に実行可能
+
+jobs:
+  update-odds:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install numpy scipy pandas requests beautifulsoup4
+
+      - name: Update WINNER odds preset
+        run: |
+          python scripts/populate_all_preset_odds.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/fixtures_preset.js docs/fixtures_preset.json
+          if git diff --staged --quiet; then
+            echo "No changes in odds detected."
+          else
+            git commit -m "chore(auto): update WINNER odds preset [skip ci]"
+            git push origin main
+          fi
