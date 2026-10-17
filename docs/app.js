@@ -21,26 +21,33 @@ const BASKETBALL_CHOICES = [
   { num: 16, code: "A_30+", name: "アウェイ勝利 30点差以上", side: "AWAY", min: 30, max: 100 }
 ];
 
+// サッカー18選択肢定義 (楽天toto公式 WINNER 正式番号・順序に完全準拠)
 const SOCCER_CHOICES = [
+  // 1〜7: ホーム勝利
   { num: 1, code: "1-0", name: "1 - 0 (ホーム勝ち)", h: 1, a: 0 },
   { num: 2, code: "2-0", name: "2 - 0 (ホーム勝ち)", h: 2, a: 0 },
   { num: 3, code: "2-1", name: "2 - 1 (ホーム勝ち)", h: 2, a: 1 },
   { num: 4, code: "3-0", name: "3 - 0 (ホーム勝ち)", h: 3, a: 0 },
   { num: 5, code: "3-1", name: "3 - 1 (ホーム勝ち)", h: 3, a: 1 },
   { num: 6, code: "3-2", name: "3 - 2 (ホーム勝ち)", h: 3, a: 2 },
-  { num: 7, code: "other_home_win", name: "その他ホーム勝ち", h: -1, a: -1 },
-  { num: 8, code: "0-0", name: "0 - 0 (引き分け)", h: 0, a: 0 },
-  { num: 9, code: "1-1", name: "1 - 1 (引き分け)", h: 1, a: 1 },
-  { num: 10, code: "2-2", name: "2 - 2 (引き分け)", h: 2, a: 2 },
-  { num: 11, code: "other_draw", name: "その他引き分け", h: -1, a: -1 },
-  { num: 12, code: "0-1", name: "0 - 1 (アウェイ勝ち)", h: 0, a: 1 },
-  { num: 13, code: "0-2", name: "0 - 2 (アウェイ勝ち)", h: 0, a: 2 },
-  { num: 14, code: "1-2", name: "1 - 2 (アウェイ勝ち)", h: 1, a: 2 },
-  { num: 15, code: "0-3", name: "0 - 3 (アウェイ勝ち)", h: 0, a: 3 },
-  { num: 16, code: "1-3", name: "1 - 3 (アウェイ勝ち)", h: 1, a: 3 },
-  { num: 17, code: "2-3", name: "2 - 3 (アウェイ勝ち)", h: 2, a: 3 },
-  { num: 18, code: "other_away_win", name: "その他アウェイ勝ち", h: -1, a: -1 }
+  { num: 7, code: "other_home_win", name: "その他ホーム勝ち (4点以上)", h: -1, a: -1 },
+
+  // 8〜14: アウェイ勝利
+  { num: 8, code: "0-1", name: "0 - 1 (アウェイ勝ち)", h: 0, a: 1 },
+  { num: 9, code: "0-2", name: "0 - 2 (アウェイ勝ち)", h: 0, a: 2 },
+  { num: 10, code: "1-2", name: "1 - 2 (アウェイ勝ち)", h: 1, a: 2 },
+  { num: 11, code: "0-3", name: "0 - 3 (アウェイ勝ち)", h: 0, a: 3 },
+  { num: 12, code: "1-3", name: "1 - 3 (アウェイ勝ち)", h: 1, a: 3 },
+  { num: 13, code: "2-3", name: "2 - 3 (アウェイ勝ち)", h: 2, a: 3 },
+  { num: 14, code: "other_away_win", name: "その他アウェイ勝ち (4点以上)", h: -1, a: -1 },
+
+  // 15〜18: 引き分け
+  { num: 15, code: "0-0", name: "0 - 0 (引き分け)", h: 0, a: 0 },
+  { num: 16, code: "1-1", name: "1 - 1 (引き分け)", h: 1, a: 1 },
+  { num: 17, code: "2-2", name: "2 - 2 (引き分け)", h: 2, a: 2 },
+  { num: 18, code: "other_draw", name: "その他引き分け (3得点以上)", h: -1, a: -1 }
 ];
+
 
 // グローバル状態
 let modelData = window.WINNER_MODEL_DATA || null;
