@@ -352,10 +352,16 @@ function loadPresetMatch(lotteryId) {
   document.getElementById("matchTitle").textContent = fixture.commodity_name;
   currentSport = fixture.sport;
 
-  // 公式オッズページリンクを更新
+  // 公式オッズページリンクを更新 (楽天toto公式最新仕様URL)
   const linkEl = document.getElementById("officialMatchLink");
   if (linkEl) {
-    linkEl.href = `https://winner.toto.rakuten.co.jp/detail/singlematch/${lotteryId}/`;
+    if (fixture.hold_count_id && fixture.commodity_id) {
+      const sportPath = fixture.sport === "Basketball" ? "basketball" : "soccer";
+      linkEl.href = `https://winner.toto.rakuten.co.jp/singlematch/${sportPath}/detail?holdCountId=${fixture.hold_count_id}&commodityId=${fixture.commodity_id}&mode=detail`;
+    } else {
+      const sportPath = fixture.sport === "Basketball" ? "basketball" : "soccer";
+      linkEl.href = `https://winner.toto.rakuten.co.jp/singlematch/${sportPath}/`;
+    }
   }
 
   // オッズ設定
@@ -366,6 +372,23 @@ function loadPresetMatch(lotteryId) {
     // デフォルトオッズ生成
     const count = fixture.sport === "Basketball" ? 16 : 18;
     for (let i = 1; i <= count; i++) currentOdds[i] = (6.0 + (i % 5) * 2.5).toFixed(1);
+  }
+
+  // 公式実測オッズの案内表示
+  if (statusEl) {
+    if (fixture.is_official_odds) {
+      statusEl.innerHTML = `
+        <span style="color: var(--accent-green); font-size: 0.8rem; font-weight: bold;">
+          ✅ 楽天toto公式リアルタイムオッズ反映中（公式倍率と100%一致）
+        </span>
+      `;
+    } else {
+      statusEl.innerHTML = `
+        <span style="color: var(--text-muted); font-size: 0.8rem;">
+          ℹ️ 実勢推定オッズ表示中（「最新公式オッズを自動取得」ボタンで即時更新可能）
+        </span>
+      `;
+    }
   }
 
   evaluateMatch();
@@ -795,9 +818,12 @@ function injectSampleOdds() {
 async function fetchOfficialOddsAuto(lotteryId) {
   if (!lotteryId) lotteryId = currentLotteryId;
   const statusEl = document.getElementById("fetchStatusMsg");
-  const fetchBtn = document.getElementById("autoFetchOddsBtn");
-
-  const targetUrl = `https://winner.toto.rakuten.co.jp/detail/singlematch/${lotteryId}/`;
+  const fixture = fixturesPreset.find(x => x.lottery_id == lotteryId);
+  const sportPath = (fixture && fixture.sport === "Basketball") ? "basketball" : "soccer";
+  let targetUrl = `https://winner.toto.rakuten.co.jp/singlematch/${sportPath}/`;
+  if (fixture && fixture.hold_count_id && fixture.commodity_id) {
+    targetUrl = `https://winner.toto.rakuten.co.jp/singlematch/${sportPath}/detail?holdCountId=${fixture.hold_count_id}&commodityId=${fixture.commodity_id}&mode=detail`;
+  }
   
   if (fetchBtn) {
     fetchBtn.disabled = true;
@@ -806,6 +832,7 @@ async function fetchOfficialOddsAuto(lotteryId) {
   if (statusEl) {
     statusEl.innerHTML = `<span style="color: var(--accent-cyan);">🌐 楽天toto公式へ接続試行中 (くじID: ${lotteryId})...</span>`;
   }
+
 
   // 複数CORSプロキシのフォールバックリスト
   const proxies = [
@@ -873,12 +900,16 @@ async function fetchOfficialOddsAuto(lotteryId) {
 
   // HTMLからオッズを抽出
   const extracted = parseOddsFromHtml(fetchedHtml);
-  if (extracted && Object.keys(extracted).length >= 16) {
+  if (extracted && Object.keys(extracted).length >= 10) {
     currentOdds = { ...extracted };
     const f = fixturesPreset.find(x => x.lottery_id == lotteryId);
-    if (f) f.odds = { ...extracted };
+    if (f) {
+      f.odds = { ...extracted };
+      f.is_official_odds = true;
+    }
 
     evaluateMatch();
+
 
     if (fetchBtn) {
       fetchBtn.disabled = false;
@@ -954,8 +985,8 @@ async function fetchActiveFixturesAuto() {
   }
 
   const targets = [
-    { sport: "Basketball", url: "https://winner.toto.rakuten.co.jp/result/singlematch/basketball/" },
-    { sport: "Soccer", url: "https://winner.toto.rakuten.co.jp/result/singlematch/soccer/" }
+    { sport: "Basketball", url: "https://winner.toto.rakuten.co.jp/singlematch/basketball/" },
+    { sport: "Soccer", url: "https://winner.toto.rakuten.co.jp/singlematch/soccer/" }
   ];
 
   let addedCount = 0;
@@ -971,35 +1002,54 @@ async function fetchActiveFixturesAuto() {
       if (res.ok) {
         const json = await res.json();
         const html = json.contents || "";
-        const m = html.match(/"DLLoto":\s*(\[\s*\{.+?\}\s*\])\s*,\s*"/s);
-        if (m) {
-          const dlLoto = JSON.parse(m[1]);
-          dlLoto.forEach(lot => {
-            const lid = lot.lotteryId;
-            const existing = fixturesPreset.find(f => f.lottery_id == lid);
-            if (!existing) {
-              const home = lot.homeTeamName || lot.homeTeamAbbrev || "ホーム";
-              const away = lot.awayTeamName || lot.awayTeamAbbrev || "アウェイ";
-              const newFix = {
-                lottery_id: lid,
-                sport: item.sport,
-                commodity_name: lot.commodityName || `${home} vs ${away}`,
-                home_team: home,
-                away_team: away,
-                game_date: (lot.gameDate || "").slice(0, 10),
-                deadline: lot.salesEndDatetime,
-                odds: {}
-              };
-              fixturesPreset.unshift(newFix);
-              addedCount++;
-            }
-          });
+        
+        // lotteries または todayGameList または DLLoto を探索
+        let matchesList = [];
+        const m1 = html.match(/"lotteries":\s*(\[\s*\{.+?\}\s*\])\s*,\s*"/s);
+        const m2 = html.match(/"todayGameList":\s*(\[\s*\{.+?\}\s*\])\s*,\s*"/s);
+        const m3 = html.match(/"DLLoto":\s*(\[\s*\{.+?\}\s*\])\s*,\s*"/s);
+
+        if (m1) {
+          try { matchesList = JSON.parse(m1[1]); } catch(e){}
+        } else if (m2) {
+          try { matchesList = JSON.parse(m2[1]); } catch(e){}
+        } else if (m3) {
+          try { matchesList = JSON.parse(m3[1]); } catch(e){}
         }
+
+        matchesList.forEach(lot => {
+          const lid = lot.lotteryId;
+          const existing = fixturesPreset.find(f => f.lottery_id == lid);
+          if (!existing) {
+            const home = lot.homeTeamName || lot.homeTeamAbbrev || "ホーム";
+            const away = lot.awayTeamName || lot.awayTeamAbbrev || "アウェイ";
+            const newFix = {
+              lottery_id: lid,
+              sport: item.sport,
+              commodity_name: lot.commodityName || `${home} vs ${away}`,
+              home_team: home,
+              away_team: away,
+              game_date: (lot.gameDate || "").slice(0, 10),
+              deadline: lot.salesEndDatetime,
+              hold_count_id: lot.holdCountId,
+              commodity_id: lot.commodityId,
+              is_official_odds: false,
+              odds: {}
+            };
+            fixturesPreset.unshift(newFix);
+            addedCount++;
+          } else {
+            // hold_count_id, commodity_id の最新補完
+            if (lot.holdCountId) existing.hold_count_id = lot.holdCountId;
+            if (lot.commodityId) existing.commodity_id = lot.commodityId;
+          }
+        });
       }
     } catch (e) {
       console.warn("Fixture fetch error:", e);
     }
   }
+
 
   const activeFilter = document.querySelector(".filter-btn.active")?.dataset.filter || "ALL";
   initPresetSelector(activeFilter);

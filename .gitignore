@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+venv
+scratch_*
+submission_*.zip
+アーカイブ.zip
+app.py
+data_coverage_report.md
+model_data.json
