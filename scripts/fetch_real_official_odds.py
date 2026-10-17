@@ -279,9 +279,10 @@ def main():
     with open(preset_js_path, "w", encoding="utf-8") as f:
         f.write("// WINNER公式試合＆最新公式リアルタイムオッズ・プリセットデータ\n")
         f.write(f"// 自動生成日時: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write("window.FIXTURES_PRESET = ")
+        f.write("window.FIXTURES_PRESET = window.WINNER_FIXTURES = ")
         json.dump(final_fixtures, f, ensure_ascii=False, indent=2)
         f.write(";\n")
+
 
     print(f"✅ 書き込み完了: 全 {len(final_fixtures)} 試合を格納")
     print(f"  - 公式リアルタイムオッズ取得済: {sum(1 for f in final_fixtures if f['is_official_odds'])} 試合")

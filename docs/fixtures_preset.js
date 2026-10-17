@@ -1,6 +1,6 @@
 // WINNER公式試合＆最新公式リアルタイムオッズ・プリセットデータ
 // 自動生成日時: 2026-10-17 17:25:12
-window.FIXTURES_PRESET = [
+window.FIXTURES_PRESET = window.WINNER_FIXTURES = [
   {
     "lottery_id": 10310,
     "sport": "Basketball",

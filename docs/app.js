@@ -44,10 +44,11 @@ const SOCCER_CHOICES = [
 
 // グローバル状態
 let modelData = window.WINNER_MODEL_DATA || null;
-let fixturesPreset = window.WINNER_FIXTURES || [];
+let fixturesPreset = window.FIXTURES_PRESET || window.WINNER_FIXTURES || [];
 let currentSport = "Basketball";
 let currentOdds = {}; // { selection_number: odds }
-let currentLotteryId = 10247;
+let currentLotteryId = 10310;
+
 
 // 数学ヘルパー: Student-t CDF 近似 (Hill 1970 アルゴリズム)
 function studentTCDF(t, df) {
