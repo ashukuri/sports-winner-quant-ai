@@ -370,11 +370,12 @@ function evaluateMatch() {
   const away = document.getElementById("awayTeamInput").value.trim();
   const choices = currentSport === "Basketball" ? BASKETBALL_CHOICES : SOCCER_CHOICES;
 
+  const hint = document.getElementById("matchTitle")?.textContent || "";
   let probs = [];
   if (currentSport === "Basketball") {
-    probs = predictBasketballProbs(home, away);
+    probs = predictBasketballProbs(home, away, hint);
   } else {
-    probs = predictSoccerProbs(home, away);
+    probs = predictSoccerProbs(home, away, hint);
   }
 
   // 期待値計算 & 最適買い目選定
@@ -408,17 +409,71 @@ function evaluateMatch() {
   renderOddsTable(analysis, bestBet);
 }
 
+// チーム名エイリアスマッピング (正式名称 ⇄ 略称 ⇄ Elo完全照合)
+const TEAM_ALIASES = {
+  // サッカー
+  "横浜ＦＣ": "横浜FC", "横浜FC": "横浜FC", "浦和レッズ": "浦和", "浦和": "浦和",
+  "水戸ホーリーホック": "水戸", "水戸": "水戸", "ＦＣ東京": "FC東京", "FC東京": "FC東京",
+  "横浜Ｆ・マリノス": "横浜FM", "横浜FM": "横浜FM", "清水エスパルス": "清水", "清水": "清水",
+  "松本山雅ＦＣ": "松本", "松本": "松本", "サンフレッチェ広島": "広島", "広島": "広島",
+  "ジュビロ磐田": "磐田", "磐田": "磐田", "川崎フロンターレ": "川崎Ｆ", "川崎Ｆ": "川崎Ｆ",
+  "名古屋グランパス": "名古屋", "名古屋": "名古屋", "ファジアーノ岡山": "岡山", "岡山": "岡山",
+  "ガイナーレ鳥取": "鳥取", "鳥取": "鳥取", "セレッソ大阪": "Ｃ大阪", "Ｃ大阪": "Ｃ大阪",
+  "サガン鳥栖": "鳥栖", "鳥栖": "鳥栖", "アビスパ福岡": "福岡", "福岡": "福岡",
+  "ガンバ大阪": "Ｇ大阪", "Ｇ大阪": "Ｇ大阪", "ヴィッセル神戸": "神戸", "神戸": "神戸",
+  "柏レイソル": "柏", "柏": "柏", "湘南ベルマーレ": "湘南", "湘南": "湘南",
+  "鹿島アントラーズ": "鹿島", "鹿島": "鹿島", "大分トリニータ": "大分", "大分": "大分",
+  "京都サンガF.C.": "京都", "京都": "京都", "ＦＣ町田ゼルビア": "町田", "町田": "町田",
+  "東京ヴェルディ": "東京Ｖ", "東京Ｖ": "東京Ｖ", "アルビレックス新潟": "新潟", "新潟": "新潟",
+  "北海道コンサドーレ札幌": "札幌", "札幌": "札幌", "ベガルタ仙台": "仙台", "仙台": "仙台",
+  "モンテディオ山形": "山形", "山形": "山形", "徳島ヴォルティス": "徳島", "徳島": "徳島",
+  "ヴァンフォーレ甲府": "甲府", "甲府": "甲府", "Ｖ・ファーレン長崎": "長崎", "長崎": "長崎",
+  "ジェフユナイテッド千葉": "千葉", "ツエーゲン金沢": "金沢", "カターレ富山": "富山",
+  "栃木ＳＣ": "栃木", "ＦＣ琉球": "琉球", "ロアッソ熊本": "熊本", "愛媛ＦＣ": "愛媛",
+  "レノファ山口ＦＣ": "山口", "鹿児島ユナイテッドＦＣ": "鹿児島", "いわきＦＣ": "いわき",
+  "藤枝ＭＹＦＣ": "藤枝", "ザスパ群馬": "群馬",
+  // バスケ
+  "アルバルク東京": "A東京", "A東京": "A東京", "琉球ゴールデンキングス": "琉球", "琉球": "琉球",
+  "宇都宮ブレックス": "宇都宮", "宇都宮": "宇都宮", "秋田ノーザンハピネッツ": "秋田", "秋田": "秋田",
+  "千葉ジェッツ": "千葉", "千葉": "千葉", "仙台89ERS": "仙台", "仙台": "仙台",
+  "横浜ビー・コルセアーズ": "横浜", "横浜": "横浜", "サンロッカーズ渋谷": "SR渋谷", "SR渋谷": "SR渋谷",
+  "富山グラウジーズ": "富山", "富山": "富山", "新潟アルビレックスBB": "新潟", "新潟": "新潟",
+  "三遠ネオフェニックス": "三遠", "三遠": "三遠", "川崎ブレイブサンダース": "川崎", "川崎": "川崎",
+  "名古屋ダイヤモンドドルフィンズ": "名古屋D", "名古屋D": "名古屋D", "京都ハンナリーズ": "京都", "京都": "京都",
+  "滋賀レイクスターズ": "滋賀", "滋賀": "滋賀", "シーホース三河": "三河", "三河": "三河",
+  "大阪エヴェッサ": "大阪", "大阪": "大阪", "レバンガ北海道": "北海道", "北海道": "北海道",
+  "島根スサノオマジック": "島根", "島根": "島根", "西宮ストークス": "西宮", "西宮": "西宮",
+  "ライジングゼファー福岡": "福岡", "福岡": "福岡", "信州ブレイブウォリアーズ": "信州", "信州": "信州",
+  "広島ドラゴンフライズ": "広島", "広島": "広島", "群馬クレインサンダーズ": "群馬", "群馬": "群馬",
+  "茨城ロボッツ": "茨城", "茨城": "茨城", "長崎ヴェルカ": "長崎", "長崎": "長崎",
+  "佐賀バルーナーズ": "佐賀", "佐賀": "佐賀", "ファイティングイーグルス名古屋": "FE名古屋",
+  "越谷アルファーズ": "越谷", "アルティーリ千葉": "A千葉", "鹿児島レブナイズ": "鹿児島",
+  "青森ワッツ": "青森", "福島ファイヤーボンズ": "福島", "山形ワイヴァンズ": "山形",
+  "熊本ヴォルターズ": "熊本", "バンビシャス奈良": "奈良", "愛媛オレンジバイキングス": "愛媛",
+  "ベルテックス静岡": "静岡", "福井ブローウィンズ": "福井"
+};
+
+function getTeamElo(name, sport, leagueHint = "") {
+  const alias = TEAM_ALIASES[name] || name;
+  if (sport === "Basketball") {
+    const base = leagueHint.includes("PREMIER") ? 1580 : (leagueHint.includes("ONE") ? 1460 : 1340);
+    return modelData?.basketball?.teams_elo?.[alias] || base;
+  } else {
+    const base = leagueHint.includes("J1") ? 1580 : (leagueHint.includes("J2") ? 1450 : 1330);
+    return modelData?.soccer?.teams_elo?.[alias] || base;
+  }
+}
+
 // Bリーグ推論 (XGBoost + Student-t 積分)
-function predictBasketballProbs(home, away) {
-  const bData = modelData?.basketball;
-  const homeElo = bData?.teams_elo[home] || 1500.0;
-  const awayElo = bData?.teams_elo[away] || 1500.0;
+function predictBasketballProbs(home, away, hint = "") {
+  const homeElo = getTeamElo(home, "Basketball", hint);
+  const awayElo = getTeamElo(away, "Basketball", hint);
   const eloDiff = homeElo - awayElo;
 
   // 期待点差 (Elo + リーグ定数)
   const expectedSpread = eloDiff / 25.0 + 3.5;
-  const df = bData?.meta?.student_t_df || 5.2;
-  const sigma = bData?.meta?.student_t_sigma || 11.8;
+  const df = modelData?.basketball?.meta?.student_t_df || 5.2;
+  const sigma = modelData?.basketball?.meta?.student_t_sigma || 11.8;
 
   let rawProbs = [];
   BASKETBALL_CHOICES.forEach(ch => {
@@ -440,15 +495,14 @@ function predictBasketballProbs(home, away) {
 }
 
 // サッカー推論 (Dixon-Coles ポアソン強度)
-function predictSoccerProbs(home, away) {
-  const sData = modelData?.soccer;
-  const homeElo = sData?.teams_elo[home] || 1500.0;
-  const awayElo = sData?.teams_elo[away] || 1500.0;
+function predictSoccerProbs(home, away, hint = "") {
+  const homeElo = getTeamElo(home, "Soccer", hint);
+  const awayElo = getTeamElo(away, "Soccer", hint);
   const eloDiff = (homeElo - awayElo) / 400.0;
 
   // 平均ゴール数
-  const homeAdv = sData?.home_adv || 0.156;
-  const rho = sData?.rho || -0.0519;
+  const homeAdv = modelData?.soccer?.home_adv || 0.156;
+  const rho = modelData?.soccer?.rho || -0.0519;
   const lambda = Math.max(1.35 * Math.pow(10, eloDiff * 0.3) * (1 + homeAdv), 0.3);
   const mu = Math.max(1.15 * Math.pow(10, -eloDiff * 0.3), 0.3);
 
@@ -470,7 +524,7 @@ function predictSoccerProbs(home, away) {
   // 18選択肢に集約
   let probs = [];
   SOCCER_CHOICES.forEach(ch => {
-    if (ch.h !== -1) {
+    if (ch.h !== undefined && ch.h !== -1) {
       probs.push(scoreGrid[ch.h]?.[ch.a] || 0.01);
     } else {
       let pOther = 0;
