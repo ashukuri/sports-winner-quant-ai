@@ -241,9 +241,10 @@ def main():
                 if key in live_odds and live_odds[key] is not None:
                     final_odds[key] = live_odds[key]
                 else:
-                    # 未投票選択肢: 99.0倍 (投票ゼロのため高倍率)
-                    final_odds[key] = 99.0
+                    # 未投票選択肢: 投票ゼロのため未確定 (None)
+                    final_odds[key] = None
             is_official = True
+
         elif lid in existing_preset and existing_preset[lid].get("odds"):
             # 既存プリセットからフォールバック
             final_odds = existing_preset[lid]["odds"]

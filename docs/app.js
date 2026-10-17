@@ -711,26 +711,28 @@ function renderOddsTable(analysis, bestBet) {
       tr.className = "highlight-bet";
     }
 
-    const evText = row.odds > 0 ? (row.ev >= 0 ? `+${(row.ev * 100).toFixed(1)}%` : `${(row.ev * 100).toFixed(1)}%`) : "-";
-    const evClass = row.ev > 0.15 ? "ev-positive" : "ev-negative";
-    const barWidth = Math.min(Math.max((row.ev + 0.5) * 80, 0), 100);
+    const hasOdds = row.odds && parseFloat(row.odds) > 0;
+    const evText = hasOdds ? (row.ev >= 0 ? `+${(row.ev * 100).toFixed(1)}%` : `${(row.ev * 100).toFixed(1)}%`) : '<span style="color: var(--text-muted); font-size: 0.75rem;">未投票（判定外）</span>';
+    const evClass = hasOdds ? (row.ev > 0.15 ? "ev-positive" : "ev-negative") : "";
+    const barWidth = hasOdds ? Math.min(Math.max((row.ev + 0.5) * 80, 0), 100) : 0;
 
     tr.innerHTML = `
       <td><strong>${row.num}</strong></td>
       <td>${row.name}</td>
       <td>
         <input type="number" step="0.1" min="1.0" class="table-odds-input" 
-               value="${row.odds || ''}" data-num="${row.num}" 
-               style="width: 80px; padding: 4px 6px; background: var(--bg-card); border: 1px solid var(--border-color); color: #fff; border-radius: 4px;"> 倍
+               value="${hasOdds ? row.odds : ''}" placeholder="未投票 (-)" data-num="${row.num}" 
+               style="width: 95px; padding: 4px 6px; background: var(--bg-card); border: 1px solid var(--border-color); color: #fff; border-radius: 4px;"> 倍
       </td>
       <td>${(row.prob * 100).toFixed(1)}%</td>
       <td class="${evClass}">
         ${evText}
-        ${row.ev > 0 ? `<span class="ev-bar-container"><span class="ev-bar-fill" style="width: ${barWidth}%;"></span></span>` : ''}
+        ${hasOdds && row.ev > 0 ? `<span class="ev-bar-container"><span class="ev-bar-fill" style="width: ${barWidth}%;"></span></span>` : ''}
       </td>
     `;
     tbody.appendChild(tr);
   });
+
 
   // オッズ手動変更リスナー
   document.querySelectorAll(".table-odds-input").forEach(input => {
