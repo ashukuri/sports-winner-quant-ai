@@ -121,10 +121,20 @@ document.addEventListener("DOMContentLoaded", () => {
   autoSelectBestMatch();
 });
 
-// 直近の販売中試合を自動選択
+// 直近のBET推奨試合（または直近の販売中試合）を自動選択
 function autoSelectBestMatch() {
   const now = new Date();
-  // 販売中の試合を締切昇順で探す
+  // 1. 販売中でBET推奨の試合を最優先で自動選択
+  const betFixtures = fixturesPreset
+    .filter(f => f.deadline && new Date(f.deadline) > now && f._bestBet !== null)
+    .sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
+
+  if (betFixtures.length > 0) {
+    loadPresetMatch(betFixtures[0].lottery_id);
+    return;
+  }
+
+  // 2. なければ販売中の試合を締切昇順で探す
   const inSaleFixtures = fixturesPreset
     .filter(f => f.deadline && new Date(f.deadline) > now)
     .sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
@@ -153,8 +163,33 @@ function initMaintenanceBanner() {
   }
 }
 
-// 2. プリセット試合セレクター初期化 (現在時刻に基づく動的ソート & 締切フィルタリング)
-function initPresetSelector(filterSport = "ALL") {
+// 試合ごとのAI最適買い目・購入推奨判定ヘルパー (Conservative_Value_V1)
+function getBestBetForFixture(f) {
+  const choices = f.sport === "Basketball" ? BASKETBALL_CHOICES : SOCCER_CHOICES;
+  const hint = f.commodity_name || "";
+  const probs = f.sport === "Basketball"
+    ? predictBasketballProbs(f.home_team, f.away_team, hint)
+    : predictSoccerProbs(f.home_team, f.away_team, hint);
+
+  let bestBet = null;
+  let maxEv = -999.0;
+  choices.forEach((ch, idx) => {
+    const p = probs[idx];
+    const odds = parseFloat(f.odds?.[ch.num] || 0);
+    const ev = (odds > 0) ? (p * odds - 1.0) : -1.0;
+    // Conservative_Value_V1: EV > 0.15 かつ P >= 0.08
+    if (ev > 0.15 && p >= 0.08) {
+      if (ev > maxEv) {
+        maxEv = ev;
+        bestBet = { num: ch.num, name: ch.name, odds, prob: p, ev };
+      }
+    }
+  });
+  return bestBet;
+}
+
+// 2. プリセット試合セレクター初期化 (現在時刻に基づく動的ソート & BET推奨フィルタリング)
+function initPresetSelector(filterMode = "ALL") {
   const sel = document.getElementById("presetMatchSelect");
   if (!sel) return;
   sel.innerHTML = "";
@@ -162,38 +197,53 @@ function initPresetSelector(filterSport = "ALL") {
   const now = new Date();
   const onlyInSale = document.getElementById("onlyInSaleCheckbox")?.checked ?? true;
 
-  // 競技別件数を集計してフィルターボタンを更新
-  const allInSaleCount = fixturesPreset.filter(f => !f.deadline || new Date(f.deadline) > now).length;
-  const basketInSaleCount = fixturesPreset.filter(f => f.sport === "Basketball" && (!f.deadline || new Date(f.deadline) > now)).length;
-  const soccerInSaleCount = fixturesPreset.filter(f => f.sport === "Soccer" && (!f.deadline || new Date(f.deadline) > now)).length;
+  // 全試合の販売中フラグと最良買い目を事前計算
+  fixturesPreset.forEach(f => {
+    f._deadlineDate = f.deadline ? new Date(f.deadline) : null;
+    f._isInSale = f._deadlineDate ? (f._deadlineDate > now) : false;
+    f._bestBet = getBestBetForFixture(f);
+  });
 
+  // 各種件数の集計 (販売中のみONなら販売中母数、OFFなら全件母数)
+  const targetForCounts = onlyInSale ? fixturesPreset.filter(f => f._isInSale) : fixturesPreset;
+  const allCount = targetForCounts.length;
+  const betCount = targetForCounts.filter(f => f._bestBet !== null).length;
+  const basketCount = targetForCounts.filter(f => f.sport === "Basketball").length;
+  const soccerCount = targetForCounts.filter(f => f.sport === "Soccer").length;
+
+  const btnBet = document.getElementById("filterBtnBetOnly");
   const btnAll = document.getElementById("filterBtnAll");
   const btnB = document.getElementById("filterBtnBasket");
   const btnS = document.getElementById("filterBtnSoccer");
-  if (btnAll) btnAll.textContent = `すべて (${onlyInSale ? allInSaleCount : fixturesPreset.length})`;
-  if (btnB) btnB.textContent = `🏀 バスケ (${onlyInSale ? basketInSaleCount : fixturesPreset.filter(f => f.sport === 'Basketball').length})`;
-  if (btnS) btnS.textContent = `⚽ サッカー (${onlyInSale ? soccerInSaleCount : fixturesPreset.filter(f => f.sport === 'Soccer').length})`;
 
-  // 競技フィルタリング
-  let list = filterSport === "ALL" 
-    ? [...fixturesPreset] 
-    : fixturesPreset.filter(f => f.sport === filterSport);
+  if (btnBet) btnBet.textContent = `🎯 BET推奨のみ (${betCount})`;
+  if (btnAll) btnAll.textContent = `すべて (${allCount})`;
+  if (btnB) btnB.textContent = `🏀 バスケ (${basketCount})`;
+  if (btnS) btnS.textContent = `⚽ サッカー (${soccerCount})`;
 
-  // 販売中フラグ付与
-  list.forEach(f => {
-    f._deadlineDate = f.deadline ? new Date(f.deadline) : null;
-    f._isInSale = f._deadlineDate ? (f._deadlineDate > now) : false;
-  });
-
-  // 「販売中のみ表示」フィルタリング
+  // フィルタリング適用
+  let list = [...fixturesPreset];
   if (onlyInSale) {
     list = list.filter(f => f._isInSale);
   }
 
+  if (filterMode === "BET_ONLY") {
+    list = list.filter(f => f._bestBet !== null);
+  } else if (filterMode === "Basketball") {
+    list = list.filter(f => f.sport === "Basketball");
+  } else if (filterMode === "Soccer") {
+    list = list.filter(f => f.sport === "Soccer");
+  }
+
+  // BET推奨クイックリストの描画
+  renderBetQuickList(targetForCounts.filter(f => f._bestBet !== null));
+
   if (list.length === 0) {
     const opt = document.createElement("option");
     opt.value = "";
-    opt.textContent = "※ 現在販売中の試合はありません（「販売中のみ」のチェックを外すと全試合を表示します）";
+    opt.textContent = filterMode === "BET_ONLY" 
+      ? "※ 現在の条件でBET推奨（EV>+15%）の試合はありません（「すべて」を押すと全試合を表示します）"
+      : "※ 現在販売中の試合はありません（「販売中のみ」のチェックを外すと全試合を表示します）";
     sel.appendChild(opt);
     return;
   }
@@ -208,14 +258,16 @@ function initPresetSelector(filterSport = "ALL") {
     return (b._deadlineDate || 0) - (a._deadlineDate || 0);
   });
 
-  // グループ分け (販売中: 日程別、販売終了: 過去日程)
+  // グループ分け
   const groups = {};
   list.forEach(f => {
     const dateLabel = f.game_date || "その他日程";
     const sportLabel = f.sport === "Basketball" ? "バスケ" : "サッカー";
     
     let groupKey = "";
-    if (f._isInSale) {
+    if (filterMode === "BET_ONLY") {
+      groupKey = `🎯【AI購入推奨試合】(Conservative_Value 充足)`;
+    } else if (f._isInSale) {
       const diffMs = f._deadlineDate - now;
       const diffHours = Math.floor(diffMs / 3600000);
       const diffMins = Math.floor((diffMs % 3600000) / 60000);
@@ -239,13 +291,49 @@ function initPresetSelector(filterSport = "ALL") {
     groups[key].forEach(f => {
       const opt = document.createElement("option");
       opt.value = f.lottery_id;
-      const isVerified = (f.odds && [10092, 10233, 10247, 10248].includes(Number(f.lottery_id)));
-      const oddsBadge = isVerified ? " ⚡実測確定" : " ✨即判定可";
-      const statusIcon = f._isInSale ? "🟢" : "🛑";
-      opt.textContent = `${statusIcon} くじ${f.lottery_id}: ${f.commodity_name}${oddsBadge}`;
+      if (f._bestBet) {
+        opt.textContent = `🎯 くじ${f.lottery_id}: ${f.commodity_name} → 推奨【${f._bestBet.num}】${f._bestBet.name} (EV +${(f._bestBet.ev * 100).toFixed(0)}%, ${f._bestBet.odds}倍)`;
+        opt.style.fontWeight = "bold";
+      } else {
+        const statusIcon = f._isInSale ? "🟢" : "🛑";
+        opt.textContent = `${statusIcon} くじ${f.lottery_id}: ${f.commodity_name}`;
+      }
       optgroup.appendChild(opt);
     });
     sel.appendChild(optgroup);
+  });
+}
+
+// BET推奨クイックピル一覧の描画
+function renderBetQuickList(betMatches) {
+  const container = document.getElementById("betQuickListContainer");
+  const listEl = document.getElementById("betQuickList");
+  if (!container || !listEl) return;
+
+  if (!betMatches || betMatches.length === 0) {
+    container.style.display = "none";
+    return;
+  }
+
+  container.style.display = "block";
+  listEl.innerHTML = "";
+
+  betMatches.forEach(f => {
+    const pill = document.createElement("button");
+    pill.type = "button";
+    pill.className = "btn btn-secondary";
+    pill.style.cssText = "font-size: 0.75rem; padding: 5px 10px; border: 1px solid var(--accent-green); background: rgba(16, 185, 129, 0.15); color: #fff; cursor: pointer; border-radius: 4px; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);";
+    
+    const sportIcon = f.sport === "Basketball" ? "🏀" : "⚽";
+    const evText = `+${(f._bestBet.ev * 100).toFixed(0)}%`;
+    pill.innerHTML = `<span>${sportIcon} <strong>${f.home_team} vs ${f.away_team}</strong></span> <span style="background: var(--accent-green); color: #000; padding: 1px 5px; border-radius: 3px; font-weight: bold; font-size: 0.7rem;">EV ${evText}</span>`;
+    
+    pill.addEventListener("click", () => {
+      loadPresetMatch(f.lottery_id);
+      document.getElementById("presetMatchSelect").value = f.lottery_id;
+    });
+
+    listEl.appendChild(pill);
   });
 }
 

@@ -55,12 +55,24 @@
                 </label>
               </div>
 
-              <div style="display: flex; gap: 6px; margin-bottom: 8px;">
+              <div style="display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap;">
+                <button type="button" class="btn btn-secondary filter-btn" data-filter="BET_ONLY" id="filterBtnBetOnly" style="padding: 4px 10px; font-size: 0.8rem; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-green); color: var(--accent-green); font-weight: bold;">
+                  🎯 BET推奨のみ
+                </button>
                 <button type="button" class="btn btn-secondary filter-btn active" data-filter="ALL" id="filterBtnAll" style="padding: 4px 8px; font-size: 0.8rem;">すべて</button>
                 <button type="button" class="btn btn-secondary filter-btn" data-filter="Basketball" id="filterBtnBasket" style="padding: 4px 8px; font-size: 0.8rem;">🏀 バスケ</button>
                 <button type="button" class="btn btn-secondary filter-btn" data-filter="Soccer" id="filterBtnSoccer" style="padding: 4px 8px; font-size: 0.8rem;">⚽ サッカー</button>
               </div>
               <select id="presetMatchSelect" style="font-size: 0.85rem; padding: 8px;"></select>
+              
+              <!-- BET推奨クイック選択エリア -->
+              <div id="betQuickListContainer" style="margin-top: 8px; display: none;">
+                <div style="font-size: 0.75rem; color: var(--accent-green); font-weight: bold; margin-bottom: 4px;">
+                  🎯 おすすめBET試合 (タップで即座に切り替え):
+                </div>
+                <div id="betQuickList" style="display: flex; gap: 6px; flex-wrap: wrap;"></div>
+              </div>
+
               <div id="fixtureStatusMsg" style="font-size: 0.75rem; margin-top: 4px; min-height: 16px; color: var(--text-muted);"></div>
             </div>
 
