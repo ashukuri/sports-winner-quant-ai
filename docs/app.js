@@ -117,9 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
   initMaintenanceBanner();
   initPresetSelector();
   initEventListeners();
-  // 初期試合（10247）を評価
-  loadPresetMatch(10247);
+  // 現在販売中で最も締切が近い試合を自動選択
+  autoSelectBestMatch();
 });
+
+// 直近の販売中試合を自動選択
+function autoSelectBestMatch() {
+  const now = new Date();
+  // 販売中の試合を締切昇順で探す
+  const inSaleFixtures = fixturesPreset
+    .filter(f => f.deadline && new Date(f.deadline) > now)
+    .sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
+
+  if (inSaleFixtures.length > 0) {
+    loadPresetMatch(inSaleFixtures[0].lottery_id);
+  } else if (fixturesPreset.length > 0) {
+    loadPresetMatch(fixturesPreset[0].lottery_id);
+  }
+}
 
 // 1. メンテナンスバナーの制御
 function initMaintenanceBanner() {
@@ -138,28 +153,87 @@ function initMaintenanceBanner() {
   }
 }
 
-// 2. プリセット試合セレクター初期化 (全85試合 日付・競技別グループ化)
+// 2. プリセット試合セレクター初期化 (現在時刻に基づく動的ソート & 締切フィルタリング)
 function initPresetSelector(filterSport = "ALL") {
   const sel = document.getElementById("presetMatchSelect");
+  if (!sel) return;
   sel.innerHTML = "";
 
-  // フィルタリング
-  const filtered = filterSport === "ALL" 
-    ? fixturesPreset 
+  const now = new Date();
+  const onlyInSale = document.getElementById("onlyInSaleCheckbox")?.checked ?? true;
+
+  // 競技別件数を集計してフィルターボタンを更新
+  const allInSaleCount = fixturesPreset.filter(f => !f.deadline || new Date(f.deadline) > now).length;
+  const basketInSaleCount = fixturesPreset.filter(f => f.sport === "Basketball" && (!f.deadline || new Date(f.deadline) > now)).length;
+  const soccerInSaleCount = fixturesPreset.filter(f => f.sport === "Soccer" && (!f.deadline || new Date(f.deadline) > now)).length;
+
+  const btnAll = document.getElementById("filterBtnAll");
+  const btnB = document.getElementById("filterBtnBasket");
+  const btnS = document.getElementById("filterBtnSoccer");
+  if (btnAll) btnAll.textContent = `すべて (${onlyInSale ? allInSaleCount : fixturesPreset.length})`;
+  if (btnB) btnB.textContent = `🏀 バスケ (${onlyInSale ? basketInSaleCount : fixturesPreset.filter(f => f.sport === 'Basketball').length})`;
+  if (btnS) btnS.textContent = `⚽ サッカー (${onlyInSale ? soccerInSaleCount : fixturesPreset.filter(f => f.sport === 'Soccer').length})`;
+
+  // 競技フィルタリング
+  let list = filterSport === "ALL" 
+    ? [...fixturesPreset] 
     : fixturesPreset.filter(f => f.sport === filterSport);
 
-  // 日付 & 競技別にグループ化
+  // 販売中フラグ付与
+  list.forEach(f => {
+    f._deadlineDate = f.deadline ? new Date(f.deadline) : null;
+    f._isInSale = f._deadlineDate ? (f._deadlineDate > now) : false;
+  });
+
+  // 「販売中のみ表示」フィルタリング
+  if (onlyInSale) {
+    list = list.filter(f => f._isInSale);
+  }
+
+  if (list.length === 0) {
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "※ 現在販売中の試合はありません（「販売中のみ」のチェックを外すと全試合を表示します）";
+    sel.appendChild(opt);
+    return;
+  }
+
+  // 締切日時でソート (販売中: 直近締切順、販売終了: 逆順)
+  list.sort((a, b) => {
+    if (a._isInSale && !b._isInSale) return -1;
+    if (!a._isInSale && b._isInSale) return 1;
+    if (a._isInSale && b._isInSale) {
+      return (a._deadlineDate || 0) - (b._deadlineDate || 0);
+    }
+    return (b._deadlineDate || 0) - (a._deadlineDate || 0);
+  });
+
+  // グループ分け (販売中: 日程別、販売終了: 過去日程)
   const groups = {};
-  filtered.forEach(f => {
+  list.forEach(f => {
     const dateLabel = f.game_date || "その他日程";
-    const sportLabel = f.sport === "Basketball" ? "バスケ (B.LEAGUE)" : "サッカー (J.LEAGUE)";
-    const groupKey = `${dateLabel} 【${sportLabel}】`;
+    const sportLabel = f.sport === "Basketball" ? "バスケ" : "サッカー";
+    
+    let groupKey = "";
+    if (f._isInSale) {
+      const diffMs = f._deadlineDate - now;
+      const diffHours = Math.floor(diffMs / 3600000);
+      const diffMins = Math.floor((diffMs % 3600000) / 60000);
+      let timeText = "";
+      if (diffHours < 24) {
+        timeText = ` (締切まであと ${diffHours}時間${diffMins}分)`;
+      }
+      groupKey = `🟢【販売中】${dateLabel} ${sportLabel}${timeText}`;
+    } else {
+      groupKey = `🛑【販売終了】${dateLabel} ${sportLabel} (締切済)`;
+    }
+
     if (!groups[groupKey]) groups[groupKey] = [];
     groups[groupKey].push(f);
   });
 
   // optgroup を生成
-  Object.keys(groups).sort().forEach(key => {
+  Object.keys(groups).forEach(key => {
     const optgroup = document.createElement("optgroup");
     optgroup.label = `${key} - ${groups[key].length}試合`;
     groups[key].forEach(f => {
@@ -167,7 +241,8 @@ function initPresetSelector(filterSport = "ALL") {
       opt.value = f.lottery_id;
       const isVerified = (f.odds && [10092, 10233, 10247, 10248].includes(Number(f.lottery_id)));
       const oddsBadge = isVerified ? " ⚡実測確定" : " ✨即判定可";
-      opt.textContent = `くじ${f.lottery_id}: ${f.commodity_name}${oddsBadge}`;
+      const statusIcon = f._isInSale ? "🟢" : "🛑";
+      opt.textContent = `${statusIcon} くじ${f.lottery_id}: ${f.commodity_name}${oddsBadge}`;
       optgroup.appendChild(opt);
     });
     sel.appendChild(optgroup);
@@ -238,6 +313,25 @@ function initEventListeners() {
   document.getElementById("presetMatchSelect").addEventListener("change", (e) => {
     loadPresetMatch(e.target.value);
   });
+
+  // 🔄 公式試合更新ボタン
+  const refreshFixBtn = document.getElementById("refreshFixturesBtn");
+  if (refreshFixBtn) {
+    refreshFixBtn.addEventListener("click", fetchActiveFixturesAuto);
+  }
+
+  // 「販売中のみ表示」チェックボックス切り替え
+  const onlyInSaleCheck = document.getElementById("onlyInSaleCheckbox");
+  if (onlyInSaleCheck) {
+    onlyInSaleCheck.addEventListener("change", () => {
+      const activeFilter = document.querySelector(".filter-btn.active")?.dataset.filter || "ALL";
+      initPresetSelector(activeFilter);
+      const firstOpt = document.getElementById("presetMatchSelect")?.querySelector("option");
+      if (firstOpt && firstOpt.value) {
+        loadPresetMatch(firstOpt.value);
+      }
+    });
+  }
 
   // ⚡ 1クリック公式自動取得ボタン
   const autoFetchBtn = document.getElementById("autoFetchOddsBtn");
@@ -703,3 +797,84 @@ function parseOddsFromHtml(html) {
 
   return null;
 }
+
+// 10. 🔄 公式から最新の販売中試合一覧を自動取得・更新する機能
+async function fetchActiveFixturesAuto() {
+  const btn = document.getElementById("refreshFixturesBtn");
+  const msgEl = document.getElementById("fixtureStatusMsg");
+
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = "📡 試合取得中...";
+  }
+  if (msgEl) {
+    msgEl.innerHTML = `<span style="color: var(--accent-cyan);">🌐 楽天toto公式から最新の販売中試合を取得中...</span>`;
+  }
+
+  const targets = [
+    { sport: "Basketball", url: "https://winner.toto.rakuten.co.jp/result/singlematch/basketball/" },
+    { sport: "Soccer", url: "https://winner.toto.rakuten.co.jp/result/singlematch/soccer/" }
+  ];
+
+  let addedCount = 0;
+
+  for (const item of targets) {
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(item.url)}`;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 7000);
+      const res = await fetch(proxyUrl, { signal: controller.signal });
+      clearTimeout(timeoutId);
+
+      if (res.ok) {
+        const json = await res.json();
+        const html = json.contents || "";
+        const m = html.match(/"DLLoto":\s*(\[\s*\{.+?\}\s*\])\s*,\s*"/s);
+        if (m) {
+          const dlLoto = JSON.parse(m[1]);
+          dlLoto.forEach(lot => {
+            const lid = lot.lotteryId;
+            const existing = fixturesPreset.find(f => f.lottery_id == lid);
+            if (!existing) {
+              const home = lot.homeTeamName || lot.homeTeamAbbrev || "ホーム";
+              const away = lot.awayTeamName || lot.awayTeamAbbrev || "アウェイ";
+              const newFix = {
+                lottery_id: lid,
+                sport: item.sport,
+                commodity_name: lot.commodityName || `${home} vs ${away}`,
+                home_team: home,
+                away_team: away,
+                game_date: (lot.gameDate || "").slice(0, 10),
+                deadline: lot.salesEndDatetime,
+                odds: {}
+              };
+              fixturesPreset.unshift(newFix);
+              addedCount++;
+            }
+          });
+        }
+      }
+    } catch (e) {
+      console.warn("Fixture fetch error:", e);
+    }
+  }
+
+  const activeFilter = document.querySelector(".filter-btn.active")?.dataset.filter || "ALL";
+  initPresetSelector(activeFilter);
+  autoSelectBestMatch();
+
+  if (btn) {
+    btn.disabled = false;
+    btn.textContent = "🔄 公式試合を更新";
+  }
+
+  if (msgEl) {
+    if (addedCount > 0) {
+      msgEl.innerHTML = `<span style="color: var(--accent-green); font-weight: bold;">✅ 新たに販売開始された ${addedCount} 試合を追加しました！</span>`;
+    } else {
+      msgEl.innerHTML = `<span style="color: var(--accent-green);">✅ 公式試合一覧を同期しました（現在販売中の試合を直近順で表示中）</span>`;
+    }
+    setTimeout(() => { if (msgEl) msgEl.innerHTML = ""; }, 5000);
+  }
+}
+

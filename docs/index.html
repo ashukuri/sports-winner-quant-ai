@@ -40,16 +40,28 @@
         <!-- 左カラム: 試合選択 & オッズ入力 -->
         <div class="sidebar-col">
           <div class="card">
-            <h3 class="card-title">1. 対象試合の選択</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h3 class="card-title" style="margin-bottom: 0;">1. 対象試合の選択</h3>
+              <button type="button" id="refreshFixturesBtn" class="btn btn-secondary" style="padding: 3px 8px; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;">
+                🔄 公式試合を更新
+              </button>
+            </div>
             
             <div class="form-group">
-              <label for="presetMatchSelect">販売中公式試合から選択 (全85試合・1クリック反映)</label>
-              <div style="display: flex; gap: 6px; margin-bottom: 8px;">
-                <button type="button" class="btn btn-secondary filter-btn active" data-filter="ALL" style="padding: 4px 10px; font-size: 0.8rem;">すべて (85)</button>
-                <button type="button" class="btn btn-secondary filter-btn" data-filter="Basketball" style="padding: 4px 10px; font-size: 0.8rem;">🏀 バスケ (47)</button>
-                <button type="button" class="btn btn-secondary filter-btn" data-filter="Soccer" style="padding: 4px 10px; font-size: 0.8rem;">⚽ サッカー (38)</button>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <label for="presetMatchSelect" style="margin-bottom: 0;">対象公式試合</label>
+                <label style="font-size: 0.75rem; color: var(--accent-cyan); display: flex; align-items: center; gap: 4px; cursor: pointer;">
+                  <input type="checkbox" id="onlyInSaleCheckbox" checked> 販売中のみ表示
+                </label>
               </div>
-              <select id="presetMatchSelect"></select>
+
+              <div style="display: flex; gap: 6px; margin-bottom: 8px;">
+                <button type="button" class="btn btn-secondary filter-btn active" data-filter="ALL" id="filterBtnAll" style="padding: 4px 8px; font-size: 0.8rem;">すべて</button>
+                <button type="button" class="btn btn-secondary filter-btn" data-filter="Basketball" id="filterBtnBasket" style="padding: 4px 8px; font-size: 0.8rem;">🏀 バスケ</button>
+                <button type="button" class="btn btn-secondary filter-btn" data-filter="Soccer" id="filterBtnSoccer" style="padding: 4px 8px; font-size: 0.8rem;">⚽ サッカー</button>
+              </div>
+              <select id="presetMatchSelect" style="font-size: 0.85rem; padding: 8px;"></select>
+              <div id="fixtureStatusMsg" style="font-size: 0.75rem; margin-top: 4px; min-height: 16px; color: var(--text-muted);"></div>
             </div>
 
             <div class="form-group">
